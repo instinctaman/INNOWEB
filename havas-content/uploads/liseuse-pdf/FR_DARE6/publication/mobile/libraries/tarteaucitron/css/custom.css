@@ -1,0 +1,22 @@
+body #tarteaucitronRoot #tarteaucitronAlertBig {
+	display: none!important;
+}
+
+body #tarteaucitronAlertSmall {
+	background: #fff;
+}
+
+body #tarteaucitronAlertSmall #tarteaucitronManager {
+	color: #333;
+}
+
+body #tarteaucitronAlertSmall #tarteaucitronManager #tarteaucitronDot {
+	display: none;
+}
+
+/* For iphone notch */
+@media screen and (max-width: 767px) {
+  #tarteaucitronRoot #tarteaucitron {
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  }
+}

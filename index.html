@@ -1,0 +1,1603 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+    <meta charset="UTF-8">
+    <title>ScrollSynced Carousel V3 (Gsap + Swiper)</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel='stylesheet' href='https://assets.codepen.io/573855/swiper.min.css'>
+    <link rel="stylesheet" href="./style.css">
+    <link rel='dns-prefetch' href='http://cdnjs.cloudflare.com/' />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <!-- AOS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <style id='wpseopress-local-business-style-inline-css' type='text/css'>
+        span.wp-block-wpseopress-local-business-field {
+            margin-right: 8px
+        }
+    </style>
+    <style id='classic-theme-styles-inline-css' type='text/css'>
+        /*! This file is auto-generated */
+        .wp-block-button__link {
+            color: #fff;
+            background-color: #32373c;
+            border-radius: 9999px;
+            box-shadow: none;
+            text-decoration: none;
+            padding: calc(.667em + 2px) calc(1.333em + 2px);
+            font-size: 1.125em
+        }
+
+        .wp-block-file__button {
+            background: #32373c;
+            color: #fff;
+            text-decoration: none
+        }
+    </style>
+    <style id='global-styles-inline-css' type='text/css'>
+        :root {
+            --wp--preset--aspect-ratio--square: 1;
+            --wp--preset--aspect-ratio--4-3: 4/3;
+            --wp--preset--aspect-ratio--3-4: 3/4;
+            --wp--preset--aspect-ratio--3-2: 3/2;
+            --wp--preset--aspect-ratio--2-3: 2/3;
+            --wp--preset--aspect-ratio--16-9: 16/9;
+            --wp--preset--aspect-ratio--9-16: 9/16;
+            --wp--preset--color--black: #000000;
+            --wp--preset--color--cyan-bluish-gray: #abb8c3;
+            --wp--preset--color--white: #ffffff;
+            --wp--preset--color--pale-pink: #f78da7;
+            --wp--preset--color--vivid-red: #cf2e2e;
+            --wp--preset--color--luminous-vivid-orange: #ff6900;
+            --wp--preset--color--luminous-vivid-amber: #fcb900;
+            --wp--preset--color--light-green-cyan: #7bdcb5;
+            --wp--preset--color--vivid-green-cyan: #00d084;
+            --wp--preset--color--pale-cyan-blue: #8ed1fc;
+            --wp--preset--color--vivid-cyan-blue: #0693e3;
+            --wp--preset--color--vivid-purple: #9b51e0;
+            --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+            --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+            --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
+            --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
+            --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
+            --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+            --wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
+            --wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
+            --wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+            --wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
+            --wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
+            --wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+            --wp--preset--font-size--small: 13px;
+            --wp--preset--font-size--medium: 20px;
+            --wp--preset--font-size--large: 36px;
+            --wp--preset--font-size--x-large: 42px;
+            --wp--preset--spacing--20: 0.44rem;
+            --wp--preset--spacing--30: 0.67rem;
+            --wp--preset--spacing--40: 1rem;
+            --wp--preset--spacing--50: 1.5rem;
+            --wp--preset--spacing--60: 2.25rem;
+            --wp--preset--spacing--70: 3.38rem;
+            --wp--preset--spacing--80: 5.06rem;
+            --wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
+            --wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
+            --wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
+            --wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);
+            --wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);
+        }
+
+        :where(.is-layout-flex) {
+            gap: 0.5em;
+        }
+
+        :where(.is-layout-grid) {
+            gap: 0.5em;
+        }
+
+        body .is-layout-flex {
+            display: flex;
+        }
+
+        .is-layout-flex {
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .is-layout-flex> :is(*, div) {
+            margin: 0;
+        }
+
+        body .is-layout-grid {
+            display: grid;
+        }
+
+        .is-layout-grid> :is(*, div) {
+            margin: 0;
+        }
+
+        :where(.wp-block-columns.is-layout-flex) {
+            gap: 2em;
+        }
+
+        :where(.wp-block-columns.is-layout-grid) {
+            gap: 2em;
+        }
+
+        :where(.wp-block-post-template.is-layout-flex) {
+            gap: 1.25em;
+        }
+
+        :where(.wp-block-post-template.is-layout-grid) {
+            gap: 1.25em;
+        }
+
+        .has-black-color {
+            color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-color {
+            color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-color {
+            color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-color {
+            color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-color {
+            color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-color {
+            color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-color {
+            color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-color {
+            color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-color {
+            color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-color {
+            color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-color {
+            color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-color {
+            color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-background-color {
+            background-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-background-color {
+            background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-background-color {
+            background-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-background-color {
+            background-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-background-color {
+            background-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-background-color {
+            background-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-background-color {
+            background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-background-color {
+            background-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-border-color {
+            border-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-border-color {
+            border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-border-color {
+            border-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-border-color {
+            border-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-border-color {
+            border-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-border-color {
+            border-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-border-color {
+            border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-border-color {
+            border-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+            background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+        }
+
+        .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+            background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+        }
+
+        .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+        }
+
+        .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+            background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+        }
+
+        .has-cool-to-warm-spectrum-gradient-background {
+            background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+        }
+
+        .has-blush-light-purple-gradient-background {
+            background: var(--wp--preset--gradient--blush-light-purple) !important;
+        }
+
+        .has-blush-bordeaux-gradient-background {
+            background: var(--wp--preset--gradient--blush-bordeaux) !important;
+        }
+
+        .has-luminous-dusk-gradient-background {
+            background: var(--wp--preset--gradient--luminous-dusk) !important;
+        }
+
+        .has-pale-ocean-gradient-background {
+            background: var(--wp--preset--gradient--pale-ocean) !important;
+        }
+
+        .has-electric-grass-gradient-background {
+            background: var(--wp--preset--gradient--electric-grass) !important;
+        }
+
+        .has-midnight-gradient-background {
+            background: var(--wp--preset--gradient--midnight) !important;
+        }
+
+        .has-small-font-size {
+            font-size: var(--wp--preset--font-size--small) !important;
+        }
+
+        .has-medium-font-size {
+            font-size: var(--wp--preset--font-size--medium) !important;
+        }
+
+        .has-large-font-size {
+            font-size: var(--wp--preset--font-size--large) !important;
+        }
+
+        .has-x-large-font-size {
+            font-size: var(--wp--preset--font-size--x-large) !important;
+        }
+
+        :where(.wp-block-post-template.is-layout-flex) {
+            gap: 1.25em;
+        }
+
+        :where(.wp-block-post-template.is-layout-grid) {
+            gap: 1.25em;
+        }
+
+        :where(.wp-block-columns.is-layout-flex) {
+            gap: 2em;
+        }
+
+        :where(.wp-block-columns.is-layout-grid) {
+            gap: 2em;
+        }
+
+        :root :where(.wp-block-pullquote) {
+            font-size: 1.5em;
+            line-height: 1.6;
+        }
+    </style>
+    <link rel='stylesheet' id='rgpd-css-hdf-css' href='assets/css/tarteaucitron-HDF.css' media='all' />
+    <link rel='stylesheet' id='havas_group-style-css' href='assets/css/style.css' media='all' />
+    <link rel='stylesheet' id='havas_group-style-custom-css' href='assets/css/app.css' media='all' />
+    <link rel='stylesheet' id='havas_group-style-slider-css'
+        href='../cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css' media='all' />
+    <link rel='stylesheet' id='tablepress-default-css' href='havas-content/plugins/tablepress/css/build/default.css'
+        media='all' />
+    <script src="wp-includes/js/jquery/jquery.min.js" id="jquery-core-js"></script>
+    <script src="wp-includes/js/jquery/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+    <script src="assets/js/tarteaucitron.js" id="rgpd-js-js"></script>
+    <script src="assets/js/tarteaucitronHDF.js" id="rgpd-js-hdf-js"></script>
+    <link rel="icon" href="havas-content/uploads/2024/07/havas-favicon-32px.png" sizes="32x32" />
+    <link rel="icon" href="havas-content/uploads/2024/07/havas-favicon-32px.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="havas-content/uploads/2024/07/havas-favicon-32px.png" />
+    <meta name="msapplication-TileImage"
+        content="https://www.havas.com/havas-content/uploads/2024/07/havas-favicon-32px.png" />
+    <!-- Tarteaucitron -->
+    <script>
+        /* Tarteaucitron */
+        tarteaucitron.init({
+            "privacyUrl": "https://www.havas.com/data-protection-policy/", /* Privacy policy url */
+            "cookieUrl": "https://www.havas.com/cookie-policy/", /* cookie url */
+            "hashtag": "#rgpd", /* Open the panel with this hashtag */
+            "cookieName": "tartaucitron", /* Cookie name */
+            "orientation": "bottom", /* Banner position (top - bottom) */
+            "showAlertSmall": false, /* Show the small banner on bottom right */
+            "cookieslist": true, /* Show the cookie list */
+            "adblocker": false, /* Show a Warning if an adblocker is detected */
+            "AcceptAllCta": true, /* Show the accept all button when highPrivacy on */
+            "highPrivacy": true, /* Disable auto consent */
+            "handleBrowserDNTRequest": false, /* If Do Not Track == 1, disallow all */
+            "removeCredit": true, /* Remove credit link */
+            "moreInfoLink": true, /* Show more info link */
+            "useExternalCss": true /* If false, the tarteaucitron.css file will be loaded */
+            //"cookieDomain": ".my-multisite-domaine.fr" /* Shared cookie for subdomain website */
+        });
+        (tarteaucitron.job = tarteaucitron.job || []).push('dailymotion');
+
+        tarteaucitron.user.matomoId = 1;
+        tarteaucitron.user.matomoHost = 'https://havasgroup-site.matomo.cloud/';
+        (tarteaucitron.job = tarteaucitron.job || []).push('matomocloud');
+        (tarteaucitron.job = tarteaucitron.job || []).push('youtube');
+        (tarteaucitron.job = tarteaucitron.job || []).push('dailymotion');
+        (tarteaucitron.job = tarteaucitron.job || []).push('vimeo');
+    </script>
+    <!-- ./Tarteaucitron -->
+    <style id="rocket-lazyrender-inline-css">
+        [data-wpr-lazyrender] {
+            content-visibility: auto;
+        }
+    </style>
+    <meta name="generator" content="WP Rocket 3.17.3.1" data-wpr-features="wpr_automatic_lazy_rendering" />
+
+</head>
+
+<body class="home page-template page-template-tpl-home page-template-tpl-home-php page page-id-15">
+    <div class="app">
+        <nav class="c-skipLink" role="navigation" aria-label="Quick access">
+            <a href="#content">Content</a>
+        </nav>
+        <nav aria-label="Main menu" role="navigation">
+            <header class="header" role="banner">
+                <a href="index.html" class="logo-header__ctn" title="Back to Havas' home page">
+                    <span class="sr-only">Home</span>
+                    <img class="logo-header" src="havas-content/themes/havas-group/dist/assets/images/Inno_logo.png"
+                        alt="havas" />
+                </a>
+                <div class="header__right">
+                    <div class="header__right-links">
+                        <a class="link-prosumer btn-underline full-- simpleLink"
+                            href="investor-relations-shareholders/index.html" target="_self"
+                            title="Investors/Shareholders">Investors/Shareholders</a>
+                        <!-- <ul class="c-menu__language">
+                            <li class="lang-item lang-item-2 lang-item-en current-lang lang-item-first"><a lang="en-US"
+                                    hreflang="en-US" href="index.html">en</a></li>
+                            <li class="lang-item lang-item-5 lang-item-fr"><a lang="fr-FR" hreflang="fr-FR"
+                                    href="https://www.havas.fr/">fr</a></li>
+                        </ul> -->
+                    </div>
+                    <button aria-expanded="false" aria-controls="main-menu" class="burger-menu"
+                        title="Menu"><span></span><span class="close"></span> <span class="sr-only">Menu</span></button>
+                </div>
+            </header>
+            <div class="c-menu" id="main-menu" tabindex="-1" data-label-submenu="Show submenu of page">
+                <div class="container">
+                    <ul id="menu-main-menu" class="c-menu__list">
+                        <li id="menu-item-9704"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-9704 js-elt">
+                            <a href="who-we-are/our-mission/index.html">Who we are</a>
+                            <ul class="sub-menu">
+                                <li id="menu-item-2363"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2363 js-elt">
+                                    <a href="who-we-are/our-mission/index.html">Our mission</a>
+                                </li>
+                                <li id="menu-item-9469"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9469 js-elt">
+                                    <a href="who-we-are/our-strategy/index.html">Our strategy</a>
+                                </li>
+                                <li id="menu-item-10018"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10018 js-elt">
+                                    <a href="who-we-are/governance/index.html">Governance</a>
+                                </li>
+                                <li id="menu-item-9470"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9470 js-elt">
+                                    <a href="who-we-are/our-villages/index.html">Our Villages</a>
+                                </li>
+                                <li id="menu-item-9472"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9472 js-elt">
+                                    <a href="who-we-are/our-careers/index.html">Our careers</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="menu-item-2367"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2367 js-elt">
+                            <a href="what-we-do/index.html">What we do</a>
+                            <ul class="sub-menu">
+                                <li id="menu-item-9729"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9729 js-elt">
+                                    <a href="what-we-do/index.html">Our services</a>
+                                </li>
+                                <li id="menu-item-9585"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9585 js-elt">
+                                    <a href="find-us/indexa083.html?service=business-consultancy-transformation">Business
+                                        Consultancy &#038; Transformation</a>
+                                </li>
+                                <li id="menu-item-9586"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9586 js-elt">
+                                    <a href="find-us/indexec44.html?service=brand-consultancy-design">Brand Consultancy
+                                        &#038; Design</a>
+                                </li>
+                                <li id="menu-item-9587"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9587 js-elt">
+                                    <a href="find-us/indexac96.html?service=creative">Creative</a>
+                                </li>
+                                <li id="menu-item-9588"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9588 js-elt">
+                                    <a href="find-us/index71de.html?service=media">Media</a>
+                                </li>
+                                <li id="menu-item-9589"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9589 js-elt">
+                                    <a href="find-us/index0261.html?service=health-wellness">Health &#038; Wellness</a>
+                                </li>
+                                <li id="menu-item-9590"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9590 js-elt">
+                                    <a href="find-us/indexa47a.html?service=customer-experience">Customer Experience</a>
+                                </li>
+                                <li id="menu-item-9593"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9593 js-elt">
+                                    <a href="find-us/index966b.html?service=pr-public-affairs-corporate-communications">PR,
+                                        Public Affairs &#038; Corporate Communications</a>
+                                </li>
+                                <li id="menu-item-9591"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9591 js-elt">
+                                    <a href="find-us/indexe02c.html?service=brand-partnership-sponsorship-events">Brand
+                                        partnership, Sponsorship &#038; Events</a>
+                                </li>
+                                <li id="menu-item-9592"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9592 js-elt">
+                                    <a href="find-us/index2854.html?service=production-content-at-scale">Production
+                                        &#038; Content at Scale</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="menu-item-14709"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-14709 js-elt">
+                            <a href="investor-relations-shareholders/index.html">Investor relations &#038;
+                                shareholders</a>
+                            <ul class="sub-menu">
+                                <li id="menu-item-14708"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14708 js-elt">
+                                    <a href="investor-relations-shareholders/company-information/index.html">Company
+                                        &#038; Havas share information</a>
+                                </li>
+                                <li id="menu-item-15101"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15101 js-elt">
+                                    <a
+                                        href="investor-relations-shareholders/financial-press-releases-presentations/index.html">Financial
+                                        press releases &#038; presentations</a>
+                                </li>
+                                <li id="menu-item-15100"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15100 js-elt">
+                                    <a href="investor-relations-shareholders/regulated-information/index.html">Regulated
+                                        information</a>
+                                </li>
+                                <li id="menu-item-14757"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14757 js-elt">
+                                    <a href="investor-relations-shareholders/admission-documents/index.html">Admission
+                                        documents</a>
+                                </li>
+                                <li id="menu-item-15673"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15673 js-elt">
+                                    <a href="investor-relations-shareholders/2025-annual-general-meeting/index.html">2025
+                                        Annual General Meeting</a>
+                                </li>
+                                <li id="menu-item-15046"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15046 js-elt">
+                                    <a href="investor-relations-shareholders/individual-shareholders/index.html">Individual
+                                        shareholders</a>
+                                </li>
+                                <li id="menu-item-14707"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14707 js-elt">
+                                    <a
+                                        href="investor-relations-shareholders/financial-and-ir-calendar-contact/index.html">Financial
+                                        and IR calendar &#038; contact</a>
+                                </li>
+                                <li id="menu-item-15058"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15058 js-elt">
+                                    <a href="investor-relations-shareholders/analyst-coverage/index.html">Analyst
+                                        coverage</a>
+                                </li>
+                                <li id="menu-item-13618"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13618 js-elt">
+                                    <a href="investor-relations-shareholders/archives/index.html">Archives</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="menu-item-10175"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10175 js-elt"><a
+                                href="work/index.html">Creative work</a></li>
+                        <li id="menu-item-12054"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12054 js-elt"><a
+                                href="life-at-havas/index.html">Life at Havas</a></li>
+                        <li id="menu-item-9684"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-9684 js-elt">
+                            <a target="_blank" href="sustainability/index.html">Sustainability</a>
+                            <ul class="sub-menu">
+                                <li id="menu-item-11505"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11505 js-elt">
+                                    <a href="sustainability/index.html">Impact+</a>
+                                </li>
+                                <li id="menu-item-11503"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11503 js-elt">
+                                    <a href="sustainability/our-pillars/index.html">Our pillars</a>
+                                </li>
+                                <li id="menu-item-11504"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11504 js-elt">
+                                    <a href="sustainability/havas-in-action/index.html">Havas in action</a>
+                                </li>
+                                <li id="menu-item-11502"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11502 js-elt">
+                                    <a href="sustainability/documentation/index.html">Documentation</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="menu-item-10124"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10124 js-elt"><a
+                                href="press/index.html">Press</a></li>
+                    </ul>
+                </div>
+
+                <div class="c-menu__bottom">
+                    <div class="container">
+                        <div class="c-menu__dare">
+                            <a href="dare/index.html" target="_self" class="simpleLink" title="Dare! Magazine">Dare!
+                                Magazine</a>
+                        </div>
+                        <div class="c-menu__dare">
+                            <a href="press_release/meaningful-brands-2019-press-release/index.html" target="_self"
+                                class="simpleLink" title="Meaningful Brands">Meaningful Brands</a>
+                        </div>
+                        <div class="c-menu__dare">
+                            <a href="prosumer-reports/index.html" target="_self" class="simpleLink"
+                                title="Prosumer Reports">Prosumer Reports</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <main class="main-container" role="main" id="content">
+            <div class="main">
+                <div class="anchors-menu js-anchors-menu">
+                    <ul></ul>
+                    <p>Scroll down</p>
+                </div>
+                <!-- BLOCK HERO -->
+                <!-- <section data-theme-color="dark-theme" id="hero" data-label="Video presentation"
+                    class="block-hero container container-home visible js-anchor">
+                    <span class="block-hero__line"></span>
+                    <div class="block-hero__content">
+                        <h1 data-animation-path="https://www.havas.com/havas-content/themes/havas-group/dist/assets/images/logo_red-animated.json"
+                            class="hero-logo"></h1>
+                        <h2 data-delay="1" class="hero-title title-animated"> </h2>
+                    </div>
+                </section> -->
+                <!-- !BLOCK HERO -->
+                <div id="slider">
+                    <div id="layerslider_6" class="ls-wp-container ls-container ls-v5"
+                        style="width: 100%; height: 600px; max-width: 1920px; margin: 0px auto; visibility: visible;">
+
+                        <!-- Slide-->
+                        <div class="ls-inner" style="background-color: transparent; width: 1326px; height: 600px;">
+                            <div class="ls-lt-container ls-overflow-hidden"
+                                style="width: 1326px; height: 600px; display: block;">
+                                <div class="ls-curtiles" style="overflow: hidden;">
+                                    <div class="ls-lt-tile" style="width: 1326px; height: 600px; overflow: hidden;">
+                                        <div class="ls-curtile" style="opacity: 1; left: 0px; top: 600px;"><img
+                                                src="images/slider/layerslider/slider-bg3_9.jpg"
+                                                style="width: 1920px; height: 600px; margin-left: -297px; margin-top: 0px;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ls-nexttiles">
+                                    <div class="ls-lt-tile" style="width: 1326px; height: 600px; overflow: hidden;">
+                                        <div class="ls-nexttile" style="top: 0px; left: 0px; opacity: 1;"><img
+                                                src="images/slider/layerslider/slider-bg2.jpg"
+                                                style="width: 1920px; height: 600px; margin-left: -297px; margin-top: 0px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ls-slide slide2" data-ls="slidedelay:10000;transition2d:4;"
+                                style="width: 0px; height: 600px; visibility: visible; display: none; inset: 0px auto auto 0px;">
+                                <img src="images/slider/layerslider/slider-bg3_10.jpg"
+                                    data-src="images/slider/layerslider/slider-bg3_10.jpg" class="ls-bg ls-preloaded"
+                                    alt="Slide background"
+                                    style="padding: 0px; border-width: 0px; width: 1920px; height: 600px; margin-left: -297px; margin-top: 0px; visibility: hidden;">
+                                <div class="ls-gpuhack"
+                                    style="width: auto; height: auto; padding: 0px; border-width: 0px; left: 78px; top: 0px;">
+                                </div>
+                                <div class="ls-l"
+                                    style="top: 170px; left: 78px; font-weight: 700; z-index: 5; padding: 0px 0px 0px 640px; font-family: Ubuntu, &quot;Open Sans&quot;, sans-serif; font-size: 35px; line-height: 46px; color: rgb(255, 255, 255); white-space: nowrap; width: auto; height: auto; border-width: 0px; margin-left: 0px; margin-top: 0px; transform-origin: left 50% 0px; transform: matrix3d(0, 0, 1, -0.002, 0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 0, 1); opacity: 1; visibility: hidden; filter: none;"
+                                    data-ls="offsetxin:0;offsetyin:-100;durationin:2500;delayin:2000;transformoriginin:left 50% 0;offsetxout:0;rotateyout:-90;transformoriginout:left 50% 0;">
+                                    Empower your Success Journey<br> by Engaging and Connecting</div>
+                                <div class="ls-l"
+                                    style="top: 120px; left: 718px; font-weight: 100; z-index: 3; font-family: Ubuntu; font-size: 30px; line-height: 26px; color: rgb(255, 255, 255); white-space: nowrap; width: auto; height: auto; padding: 0px; border-width: 0px; margin-left: 0px; margin-top: 0px; transform-origin: 50% 50% 0px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.002, -80, 0, 0, 1); opacity: 1; visibility: hidden; filter: none;"
+                                    data-ls="offsetxin:700;durationin:2000;delayin:1500;">We Offer Professional IT
+                                    Solutions </div>
+                                <div class="ls-l"
+                                    style="top: 430px; left: 723px; z-index: 3; font-family: Ubuntu; font-size: 20px; color: rgb(255, 255, 255); white-space: nowrap; width: auto; height: auto; padding: 0px; border-width: 0px; margin-left: 0px; margin-top: 0px; transform-origin: 50% 50% 0px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.002, -80, 0, 0, 1); opacity: 1; visibility: hidden; filter: none;"
+                                    data-ls="offsetxin:0;offsetyin:-50;durationin:2000;delayin:4500;">
+                                    <div class="round-list"> *We provide the best class 24/7 support </div>
+                                </div>
+
+
+                                <div class="ls-l"
+                                    style="top: 0px; left: 78px; white-space: nowrap; width: auto; height: auto; font-size: 14px; padding: 0px; border-width: 0px; margin-left: 0px; margin-top: 0px; transform-origin: 50% 50% 0px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.002, -80, 0, 0, 1); opacity: 1; visibility: hidden; filter: none;">
+                                </div>
+                                <img class="ls-l ls-preloaded"
+                                    style="top: 0px; left: 688px; z-index: 0; white-space: nowrap; width: 939px; height: 600px; padding: 0px; border-width: 0px; margin-left: 0px; margin-top: 0px; transform-origin: 50% 50% 0px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.002, -80, 0, 0, 1); opacity: 1; visibility: hidden; filter: none;"
+                                    data-ls="offsetxin:100;delayin:1000;" src="images/slider/layerslider/blur-bg.jpg"
+                                    data-src="images/slider/layerslider/blur-bg.jpg" alt="">
+
+                                <p class="ls-l"
+                                    style="top: 290px; left: 718px; width: 520px; height: 5px; border-width: 0px 0px 1px; border-bottom-style: solid; border-bottom-color: rgb(255, 255, 255); background: rgb(255, 255, 255); white-space: nowrap; font-size: 14px; padding: 0px; margin-left: 0px; margin-top: 0px; transform-origin: 50% 50% 0px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.002, -80, 0, 0, 1); opacity: 1; visibility: hidden; filter: none;"
+                                    data-ls="delayin:2500;"> <br></p>
+
+                                <!--<div class="ls-l ls-button" style="top:360px;left:740px; font-size:20px;" data-ls=" offsetxin:0;offsetyin:100;delayin:4000;durationout:450;scalexout:0;scaleyout:0;"> <a href="#" class="dt-sc-button ico-button"><button type="button">Learn More >></button></a> </div>-->
+
+                                <!--<div class="ls-l ls-button" style="top:310px;left:730px;font-size:20px;white-space: nowrap;" data-ls="offsetxin:0;offsetyin:100;delayin:4000;durationout:450;scalexout:0;scaleyout:0;"> <a href="#" class="dt-sc-button ico-button"> <span> Start Now</span> </a> </div>-->
+                                <img class="ls-l ls-preloaded"
+                                    style="top: 10px; left: 723px; white-space: nowrap; width: 80px; height: 80px; padding: 0px; border-width: 0px; margin-left: 0px; margin-top: 0px; transform-origin: 50% 50% 0px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.002, -80, 0, 0, 1); opacity: 1; visibility: hidden; filter: none;"
+                                    data-ls="offsetxin:0;offsetyin:50;delayin:4000;"
+                                    src="images/slider/layerslider/server-icon_4.png"
+                                    data-src="images/slider/layerslider/server-icon_4.png" alt="">
+
+
+
+
+                            </div>
+                            <div class="ls-slide slide2" data-ls="slidedelay:10000;transition2d:4;"
+                                style="width: 0px; height: 600px; visibility: visible; display: none; inset: 0px auto auto 0px;">
+                                <img src="images/slider/layerslider/slider-bg3_9.jpg"
+                                    data-src="images/slider/layerslider/slider-bg3_9.jpg" class="ls-bg ls-preloaded"
+                                    alt="Slide background"
+                                    style="padding: 0px; border-width: 0px; width: 1920px; height: 600px; margin-left: -297px; margin-top: 0px; visibility: hidden;">
+                                <div class="ls-gpuhack"
+                                    style="width: auto; height: auto; padding: 0px; border-width: 0px; left: 78px; top: 0px;">
+                                </div>
+                                <div class="ls-l"
+                                    style="top: 170px; left: 78px; font-weight: 700; z-index: 5; padding: 0px 0px 0px 640px; font-family: Ubuntu, &quot;Open Sans&quot;, sans-serif; font-size: 40px; line-height: 46px; color: rgb(255, 255, 255); white-space: nowrap; width: auto; height: auto; border-width: 0px; margin-left: 0px; margin-top: 0px; transform-origin: left 50% 0px; transform: matrix3d(0, 0, 1, -0.002, 0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 0, 1); opacity: 1; visibility: hidden; filter: none;"
+                                    data-ls="offsetxin:0;offsetyin:-100;durationin:2500;delayin:2000;transformoriginin:left 50% 0;offsetxout:0;rotateyout:-90;transformoriginout:left 50% 0;">
+                                    Generative AI <br> Opportunity</div>
+                                <div class="ls-l"
+                                    style="top: 120px; left: 718px; font-weight: 100; z-index: 3; font-family: Ubuntu; font-size: 30px; line-height: 26px; color: rgb(255, 255, 255); white-space: nowrap; width: auto; height: auto; padding: 0px; border-width: 0px; margin-left: 0px; margin-top: 0px; transform-origin: 50% 50% 0px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.002, -80, 0, 0, 1); opacity: 1; visibility: hidden; filter: none;"
+                                    data-ls="offsetxin:700;durationin:2000;delayin:1500;">The Transformative Power of AI
+                                </div>
+                                <div class="ls-l"
+                                    style="top: 465px; left: 723px; z-index: 3; font-family: Ubuntu; font-size: 20px; color: rgb(255, 255, 255); white-space: nowrap; width: auto; height: auto; padding: 0px; border-width: 0px; margin-left: 0px; margin-top: 0px; transform-origin: 50% 50% 0px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.002, -80, 0, 0, 1); opacity: 1; visibility: hidden; filter: none;"
+                                    data-ls="offsetxin:0;offsetyin:-50;durationin:2000;delayin:4500;">
+                                    <div class="round-list"> <svg class="svg-inline--fa fa-circle-o"
+                                            style="color: #389BAC;" aria-hidden="true" focusable="false"
+                                            data-prefix="fas" data-icon="circle-o" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                                            <g class="missing">
+                                                <path fill="currentColor"
+                                                    d="M156.5,447.7l-12.6,29.5c-18.7-9.5-35.9-21.2-51.5-34.9l22.7-22.7C127.6,430.5,141.5,440,156.5,447.7z M40.6,272H8.5 c1.4,21.2,5.4,41.7,11.7,61.1L50,321.2C45.1,305.5,41.8,289,40.6,272z M40.6,240c1.4-18.8,5.2-37,11.1-54.1l-29.5-12.6 C14.7,194.3,10,216.7,8.5,240H40.6z M64.3,156.5c7.8-14.9,17.2-28.8,28.1-41.5L69.7,92.3c-13.7,15.6-25.5,32.8-34.9,51.5 L64.3,156.5z M397,419.6c-13.9,12-29.4,22.3-46.1,30.4l11.9,29.8c20.7-9.9,39.8-22.6,56.9-37.6L397,419.6z M115,92.4 c13.9-12,29.4-22.3,46.1-30.4l-11.9-29.8c-20.7,9.9-39.8,22.6-56.8,37.6L115,92.4z M447.7,355.5c-7.8,14.9-17.2,28.8-28.1,41.5 l22.7,22.7c13.7-15.6,25.5-32.9,34.9-51.5L447.7,355.5z M471.4,272c-1.4,18.8-5.2,37-11.1,54.1l29.5,12.6 c7.5-21.1,12.2-43.5,13.6-66.8H471.4z M321.2,462c-15.7,5-32.2,8.2-49.2,9.4v32.1c21.2-1.4,41.7-5.4,61.1-11.7L321.2,462z M240,471.4c-18.8-1.4-37-5.2-54.1-11.1l-12.6,29.5c21.1,7.5,43.5,12.2,66.8,13.6V471.4z M462,190.8c5,15.7,8.2,32.2,9.4,49.2h32.1 c-1.4-21.2-5.4-41.7-11.7-61.1L462,190.8z M92.4,397c-12-13.9-22.3-29.4-30.4-46.1l-29.8,11.9c9.9,20.7,22.6,39.8,37.6,56.9 L92.4,397z M272,40.6c18.8,1.4,36.9,5.2,54.1,11.1l12.6-29.5C317.7,14.7,295.3,10,272,8.5V40.6z M190.8,50 c15.7-5,32.2-8.2,49.2-9.4V8.5c-21.2,1.4-41.7,5.4-61.1,11.7L190.8,50z M442.3,92.3L419.6,115c12,13.9,22.3,29.4,30.5,46.1 l29.8-11.9C470,128.5,457.3,109.4,442.3,92.3z M397,92.4l22.7-22.7c-15.6-13.7-32.8-25.5-51.5-34.9l-12.6,29.5 C370.4,72.1,384.4,81.5,397,92.4z">
+                                                </path>
+                                                <circle fill="currentColor" cx="256" cy="364" r="28">
+                                                    <animate attributeType="XML" repeatCount="indefinite" dur="2s"
+                                                        attributeName="r" values="28;14;28;28;14;28;"></animate>
+                                                    <animate attributeType="XML" repeatCount="indefinite" dur="2s"
+                                                        attributeName="opacity" values="1;0;1;1;0;1;"></animate>
+                                                </circle>
+                                                <path fill="currentColor" opacity="1"
+                                                    d="M263.7,312h-16c-6.6,0-12-5.4-12-12c0-71,77.4-63.9,77.4-107.8c0-20-17.8-40.2-57.4-40.2c-29.1,0-44.3,9.6-59.2,28.7 c-3.9,5-11.1,6-16.2,2.4l-13.1-9.2c-5.6-3.9-6.9-11.8-2.6-17.2c21.2-27.2,46.4-44.7,91.2-44.7c52.3,0,97.4,29.8,97.4,80.2 c0,67.6-77.4,63.5-77.4,107.8C275.7,306.6,270.3,312,263.7,312z">
+                                                    <animate attributeType="XML" repeatCount="indefinite" dur="2s"
+                                                        attributeName="opacity" values="1;0;0;0;0;1;"></animate>
+                                                </path>
+                                                <path fill="currentColor" opacity="0"
+                                                    d="M232.5,134.5l7,168c0.3,6.4,5.6,11.5,12,11.5h9c6.4,0,11.7-5.1,12-11.5l7-168c0.3-6.8-5.2-12.5-12-12.5h-23 C237.7,122,232.2,127.7,232.5,134.5z">
+                                                    <animate attributeType="XML" repeatCount="indefinite" dur="2s"
+                                                        attributeName="opacity" values="0;0;1;1;0;0;"></animate>
+                                                </path>
+                                            </g>
+                                        </svg><!-- <i class="fa fa-circle-o" style="color:#389BAC"> </i> Font Awesome fontawesome.com -->
+                                        Generative AI </div>
+                                </div>
+
+                                <img class="ls-l ls-preloaded"
+                                    style="top: 0px; left: 688px; z-index: 0; white-space: nowrap; width: 939px; height: 600px; padding: 0px; border-width: 0px; margin-left: 0px; margin-top: 0px; transform-origin: 50% 50% 0px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.002, -80, 0, 0, 1); opacity: 1; visibility: hidden; filter: none;"
+                                    data-ls="offsetxin:100;delayin:1000;" src="images/slider/layerslider/blur-bg.jpg"
+                                    data-src="images/slider/layerslider/blur-bg.jpg" alt="">
+
+                                <p class="ls-l"
+                                    style="top: 290px; left: 718px; width: 520px; height: 5px; border-width: 0px 0px 1px; border-bottom-style: solid; border-bottom-color: rgb(255, 255, 255); background: rgb(255, 255, 255); white-space: nowrap; font-size: 14px; padding: 0px; margin-left: 0px; margin-top: 0px; transform-origin: 50% 50% 0px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.002, -80, 0, 0, 1); opacity: 1; visibility: hidden; filter: none;"
+                                    data-ls="delayin:2500;"> <br></p>
+                                <img class="ls-l ls-preloaded"
+                                    style="top: 330px; left: 723px; white-space: nowrap; width: 130px; height: 110px; padding: 0px; border-width: 0px; margin-left: 0px; margin-top: 0px; transform-origin: 50% 50% 0px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.002, -80, 0, 0, 1); opacity: 1; visibility: hidden; filter: none;"
+                                    data-ls="offsetxin:0;offsetyin:50;delayin:4000;"
+                                    src="images/slider/layerslider/icon11_1_1.png"
+                                    data-src="images/slider/layerslider/icon11_1_1.png" alt="">
+                                <img class="ls-l ls-preloaded"
+                                    style="top: 330px; left: 918px; white-space: nowrap; width: 130px; height: 110px; padding: 0px; border-width: 0px; margin-left: 0px; margin-top: 0px; transform-origin: 50% 50% 0px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.002, -80, 0, 0, 1); opacity: 1; visibility: hidden; filter: none;"
+                                    data-ls="offsetxin:0;offsetyin:50;delayin:5000;"
+                                    src="images/slider/layerslider/icon11_2.png"
+                                    data-src="images/slider/layerslider/icon11_2.png" alt="">
+                                <div class="ls-l"
+                                    style="top: 465px; left: 1113px; z-index: 3; font-family: Ubuntu; font-size: 20px; color: rgb(255, 255, 255); white-space: nowrap; width: auto; height: auto; padding: 0px; border-width: 0px; margin-left: 0px; margin-top: 0px; transform-origin: 50% 50% 0px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.002, -80, 0, 0, 1); opacity: 1; visibility: hidden; filter: none;"
+                                    data-ls="offsetxin:0;offsetyin:-50;durationin:2000;delayin:6500;">
+                                    <div class="round-list"> <svg class="svg-inline--fa fa-circle-o"
+                                            style="color: #389BAC;" aria-hidden="true" focusable="false"
+                                            data-prefix="fas" data-icon="circle-o" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                                            <g class="missing">
+                                                <path fill="currentColor"
+                                                    d="M156.5,447.7l-12.6,29.5c-18.7-9.5-35.9-21.2-51.5-34.9l22.7-22.7C127.6,430.5,141.5,440,156.5,447.7z M40.6,272H8.5 c1.4,21.2,5.4,41.7,11.7,61.1L50,321.2C45.1,305.5,41.8,289,40.6,272z M40.6,240c1.4-18.8,5.2-37,11.1-54.1l-29.5-12.6 C14.7,194.3,10,216.7,8.5,240H40.6z M64.3,156.5c7.8-14.9,17.2-28.8,28.1-41.5L69.7,92.3c-13.7,15.6-25.5,32.8-34.9,51.5 L64.3,156.5z M397,419.6c-13.9,12-29.4,22.3-46.1,30.4l11.9,29.8c20.7-9.9,39.8-22.6,56.9-37.6L397,419.6z M115,92.4 c13.9-12,29.4-22.3,46.1-30.4l-11.9-29.8c-20.7,9.9-39.8,22.6-56.8,37.6L115,92.4z M447.7,355.5c-7.8,14.9-17.2,28.8-28.1,41.5 l22.7,22.7c13.7-15.6,25.5-32.9,34.9-51.5L447.7,355.5z M471.4,272c-1.4,18.8-5.2,37-11.1,54.1l29.5,12.6 c7.5-21.1,12.2-43.5,13.6-66.8H471.4z M321.2,462c-15.7,5-32.2,8.2-49.2,9.4v32.1c21.2-1.4,41.7-5.4,61.1-11.7L321.2,462z M240,471.4c-18.8-1.4-37-5.2-54.1-11.1l-12.6,29.5c21.1,7.5,43.5,12.2,66.8,13.6V471.4z M462,190.8c5,15.7,8.2,32.2,9.4,49.2h32.1 c-1.4-21.2-5.4-41.7-11.7-61.1L462,190.8z M92.4,397c-12-13.9-22.3-29.4-30.4-46.1l-29.8,11.9c9.9,20.7,22.6,39.8,37.6,56.9 L92.4,397z M272,40.6c18.8,1.4,36.9,5.2,54.1,11.1l12.6-29.5C317.7,14.7,295.3,10,272,8.5V40.6z M190.8,50 c15.7-5,32.2-8.2,49.2-9.4V8.5c-21.2,1.4-41.7,5.4-61.1,11.7L190.8,50z M442.3,92.3L419.6,115c12,13.9,22.3,29.4,30.5,46.1 l29.8-11.9C470,128.5,457.3,109.4,442.3,92.3z M397,92.4l22.7-22.7c-15.6-13.7-32.8-25.5-51.5-34.9l-12.6,29.5 C370.4,72.1,384.4,81.5,397,92.4z">
+                                                </path>
+                                                <circle fill="currentColor" cx="256" cy="364" r="28">
+                                                    <animate attributeType="XML" repeatCount="indefinite" dur="2s"
+                                                        attributeName="r" values="28;14;28;28;14;28;"></animate>
+                                                    <animate attributeType="XML" repeatCount="indefinite" dur="2s"
+                                                        attributeName="opacity" values="1;0;1;1;0;1;"></animate>
+                                                </circle>
+                                                <path fill="currentColor" opacity="1"
+                                                    d="M263.7,312h-16c-6.6,0-12-5.4-12-12c0-71,77.4-63.9,77.4-107.8c0-20-17.8-40.2-57.4-40.2c-29.1,0-44.3,9.6-59.2,28.7 c-3.9,5-11.1,6-16.2,2.4l-13.1-9.2c-5.6-3.9-6.9-11.8-2.6-17.2c21.2-27.2,46.4-44.7,91.2-44.7c52.3,0,97.4,29.8,97.4,80.2 c0,67.6-77.4,63.5-77.4,107.8C275.7,306.6,270.3,312,263.7,312z">
+                                                    <animate attributeType="XML" repeatCount="indefinite" dur="2s"
+                                                        attributeName="opacity" values="1;0;0;0;0;1;"></animate>
+                                                </path>
+                                                <path fill="currentColor" opacity="0"
+                                                    d="M232.5,134.5l7,168c0.3,6.4,5.6,11.5,12,11.5h9c6.4,0,11.7-5.1,12-11.5l7-168c0.3-6.8-5.2-12.5-12-12.5h-23 C237.7,122,232.2,127.7,232.5,134.5z">
+                                                    <animate attributeType="XML" repeatCount="indefinite" dur="2s"
+                                                        attributeName="opacity" values="0;0;1;1;0;0;"></animate>
+                                                </path>
+                                            </g>
+                                        </svg><!-- <i class="fa fa-circle-o" style="color:#389BAC"> </i> Font Awesome fontawesome.com -->
+                                        Digital Engineering </div>
+                                </div>
+                                <img class="ls-l ls-preloaded"
+                                    style="top: 330px; left: 1108px; white-space: nowrap; width: 130px; height: 110px; padding: 0px; border-width: 0px; margin-left: 0px; margin-top: 0px; transform-origin: 50% 50% 0px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.002, -80, 0, 0, 1); opacity: 1; visibility: hidden; filter: none;"
+                                    data-ls="offsetxin:0;offsetyin:50;delayin:6000;"
+                                    src="images/slider/layerslider/icon3.png"
+                                    data-src="images/slider/layerslider/icon3.png" alt="">
+                                <div class="ls-l"
+                                    style="top: 465px; left: 903px; z-index: 3; font-family: Ubuntu; font-size: 20px; color: rgb(255, 255, 255); white-space: nowrap; width: auto; height: auto; padding: 0px; border-width: 0px; margin-left: 0px; margin-top: 0px; transform-origin: 50% 50% 0px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.002, -80, 0, 0, 1); opacity: 1; visibility: hidden; filter: none;"
+                                    data-ls="offsetxin:0;offsetyin:-50;durationin:2000;delayin:5500;">
+                                    <div class="round-list"> <svg class="svg-inline--fa fa-circle-o"
+                                            style="color: #389BAC;" aria-hidden="true" focusable="false"
+                                            data-prefix="fas" data-icon="circle-o" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                                            <g class="missing">
+                                                <path fill="currentColor"
+                                                    d="M156.5,447.7l-12.6,29.5c-18.7-9.5-35.9-21.2-51.5-34.9l22.7-22.7C127.6,430.5,141.5,440,156.5,447.7z M40.6,272H8.5 c1.4,21.2,5.4,41.7,11.7,61.1L50,321.2C45.1,305.5,41.8,289,40.6,272z M40.6,240c1.4-18.8,5.2-37,11.1-54.1l-29.5-12.6 C14.7,194.3,10,216.7,8.5,240H40.6z M64.3,156.5c7.8-14.9,17.2-28.8,28.1-41.5L69.7,92.3c-13.7,15.6-25.5,32.8-34.9,51.5 L64.3,156.5z M397,419.6c-13.9,12-29.4,22.3-46.1,30.4l11.9,29.8c20.7-9.9,39.8-22.6,56.9-37.6L397,419.6z M115,92.4 c13.9-12,29.4-22.3,46.1-30.4l-11.9-29.8c-20.7,9.9-39.8,22.6-56.8,37.6L115,92.4z M447.7,355.5c-7.8,14.9-17.2,28.8-28.1,41.5 l22.7,22.7c13.7-15.6,25.5-32.9,34.9-51.5L447.7,355.5z M471.4,272c-1.4,18.8-5.2,37-11.1,54.1l29.5,12.6 c7.5-21.1,12.2-43.5,13.6-66.8H471.4z M321.2,462c-15.7,5-32.2,8.2-49.2,9.4v32.1c21.2-1.4,41.7-5.4,61.1-11.7L321.2,462z M240,471.4c-18.8-1.4-37-5.2-54.1-11.1l-12.6,29.5c21.1,7.5,43.5,12.2,66.8,13.6V471.4z M462,190.8c5,15.7,8.2,32.2,9.4,49.2h32.1 c-1.4-21.2-5.4-41.7-11.7-61.1L462,190.8z M92.4,397c-12-13.9-22.3-29.4-30.4-46.1l-29.8,11.9c9.9,20.7,22.6,39.8,37.6,56.9 L92.4,397z M272,40.6c18.8,1.4,36.9,5.2,54.1,11.1l12.6-29.5C317.7,14.7,295.3,10,272,8.5V40.6z M190.8,50 c15.7-5,32.2-8.2,49.2-9.4V8.5c-21.2,1.4-41.7,5.4-61.1,11.7L190.8,50z M442.3,92.3L419.6,115c12,13.9,22.3,29.4,30.5,46.1 l29.8-11.9C470,128.5,457.3,109.4,442.3,92.3z M397,92.4l22.7-22.7c-15.6-13.7-32.8-25.5-51.5-34.9l-12.6,29.5 C370.4,72.1,384.4,81.5,397,92.4z">
+                                                </path>
+                                                <circle fill="currentColor" cx="256" cy="364" r="28">
+                                                    <animate attributeType="XML" repeatCount="indefinite" dur="2s"
+                                                        attributeName="r" values="28;14;28;28;14;28;"></animate>
+                                                    <animate attributeType="XML" repeatCount="indefinite" dur="2s"
+                                                        attributeName="opacity" values="1;0;1;1;0;1;"></animate>
+                                                </circle>
+                                                <path fill="currentColor" opacity="1"
+                                                    d="M263.7,312h-16c-6.6,0-12-5.4-12-12c0-71,77.4-63.9,77.4-107.8c0-20-17.8-40.2-57.4-40.2c-29.1,0-44.3,9.6-59.2,28.7 c-3.9,5-11.1,6-16.2,2.4l-13.1-9.2c-5.6-3.9-6.9-11.8-2.6-17.2c21.2-27.2,46.4-44.7,91.2-44.7c52.3,0,97.4,29.8,97.4,80.2 c0,67.6-77.4,63.5-77.4,107.8C275.7,306.6,270.3,312,263.7,312z">
+                                                    <animate attributeType="XML" repeatCount="indefinite" dur="2s"
+                                                        attributeName="opacity" values="1;0;0;0;0;1;"></animate>
+                                                </path>
+                                                <path fill="currentColor" opacity="0"
+                                                    d="M232.5,134.5l7,168c0.3,6.4,5.6,11.5,12,11.5h9c6.4,0,11.7-5.1,12-11.5l7-168c0.3-6.8-5.2-12.5-12-12.5h-23 C237.7,122,232.2,127.7,232.5,134.5z">
+                                                    <animate attributeType="XML" repeatCount="indefinite" dur="2s"
+                                                        attributeName="opacity" values="0;0;1;1;0;0;"></animate>
+                                                </path>
+                                            </g>
+                                        </svg><!-- <i class="fa fa-circle-o" style="color:#389BAC"> </i> Font Awesome fontawesome.com -->
+                                        Digital Commerce </div>
+                                </div>
+                            </div>
+                            <div class="ls-slide slide2 ls-active" data-ls="slidedelay:10000;transition2d:4;"
+                                style="width: 1326px; height: 600px; inset: 0px 0px auto auto; visibility: visible; display: none;">
+                                <img src="images/slider/layerslider/slider-bg2.jpg"
+                                    data-src="images/slider/layerslider/slider-bg2.jpg" class="ls-bg ls-preloaded"
+                                    alt="Slide background"
+                                    style="padding: 0px; border-width: 0px; width: 1920px; height: 600px; margin-left: -297px; margin-top: 0px; visibility: visible;">
+                                <div class="ls-gpuhack"
+                                    style="width: auto; height: auto; padding: 0px; border-width: 0px; left: 78px; top: 0px;">
+                                </div>
+                                <div class="ls-l"
+                                    style="top: 100px; left: 108px; font-weight: 700; z-index: 5; padding: 0px 0px 0px 640px; font-family: Ubuntu, &quot;Open Sans&quot;, sans-serif; font-size: 40px; line-height: 46px; color: rgb(255, 255, 255); white-space: nowrap; filter: none; width: auto; height: auto; border-width: 0px; margin-left: 0px; margin-top: 0px; transform-origin: left 50% 0px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.002, 0, 0, 0, 1); opacity: 1; visibility: visible;"
+                                    data-ls="offsetxin:0;offsetyin:-100;durationin:2500;delayin:1000;transformoriginin:left 50% 0;offsetxout:0;rotateyout:-90;transformoriginout:left 50% 0;">
+                                    High <span style="color:#3575b9;">Performance</span> Servers</div>
+                                <img class="ls-l ls-preloaded"
+                                    style="top: 0px; left: 688px; z-index: 0; white-space: nowrap; filter: none; width: 939px; height: 600px; padding: 0px; border-width: 0px; margin-left: 0px; margin-top: 0px; transform-origin: 50% 50% 0px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.002, 0, 0, 0, 1); opacity: 1; visibility: visible;"
+                                    data-ls="offsetxin:100;delayin:1000;"
+                                    src="https://wedesignthemes.com/html/multihost/images/slider/layerslider/blur-bg.jpg"
+                                    data-src="https://wedesignthemes.com/html/multihost/images/slider/layerslider/blur-bg.jpg"
+                                    alt="">
+
+                                <div class="ls-l"
+                                    style="top: 165px; left: 998px; font-weight: 100; z-index: 3; font-family: Ubuntu, sans-serif; font-size: 30px; line-height: 26px; color: rgb(16, 16, 23); white-space: nowrap; filter: none; width: auto; height: auto; padding: 0px; border-width: 0px; margin-left: 0px; margin-top: 0px; transform-origin: 50% 50% 0px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.002, 0, 0, 0, 1); opacity: 1; visibility: visible;"
+                                    data-ls="offsetxin:-100;durationin:2000;delayin:1500;"></div>
+                                <div class="ls-l"
+                                    style="top: 210px; left: 898px; font-weight: 100; z-index: 3; font-family: Ubuntu, sans-serif; font-size: 30px; line-height: 26px; color: rgb(53, 117, 185); white-space: nowrap; filter: none; width: auto; height: auto; padding: 0px; border-width: 0px; margin-left: 0px; margin-top: 0px; transform-origin: 50% 50% 0px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.002, 0, 0, 0, 1); opacity: 1; visibility: visible;"
+                                    data-ls="offsetxin:0;offsetyin:100;durationin:2000;delayin:2000;"></div>
+                                <div class="ls-l"
+                                    style="top: 265px; left: 793px; border: 1px solid rgb(53, 117, 185); font-family: Ubuntu, sans-serif; float: left; position: relative; border-radius: 5px; width: 440px; height: 155px; white-space: nowrap; filter: none; font-size: 14px; padding: 0px; margin-left: 0px; margin-top: 0px; transform-origin: 50% 50% 0px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.002, 0, 0, 0, 1); opacity: 1; visibility: visible;"
+                                    data-ls="offsetxin:100;delayin:3000;">
+                                    <div class="dt-sc-promo-box"></div>
+                                </div>
+                                <div class="ls-l"
+                                    style="top: 285px; left: 819px; color: rgb(2, 2, 3); float: left; line-height: 28px; text-transform: capitalize; width: 520px; font-family: Ubuntu; font-size: 16px; white-space: nowrap; filter: none; height: auto; padding: 0px; border-width: 0px; margin-left: 0px; margin-top: 0px; transform-origin: 50% 50% 0px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.002, 0, 0, 0, 1); opacity: 1; visibility: visible;"
+                                    data-ls="delayin:3500;"><svg style="color: #fff;"
+                                        class="svg-inline--fa fa-arrow-circle-o-right" aria-hidden="true"
+                                        focusable="false" data-prefix="fas" data-icon="arrow-circle-o-right" role="img"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                                        <g class="missing">
+                                            <path fill="currentColor"
+                                                d="M156.5,447.7l-12.6,29.5c-18.7-9.5-35.9-21.2-51.5-34.9l22.7-22.7C127.6,430.5,141.5,440,156.5,447.7z M40.6,272H8.5 c1.4,21.2,5.4,41.7,11.7,61.1L50,321.2C45.1,305.5,41.8,289,40.6,272z M40.6,240c1.4-18.8,5.2-37,11.1-54.1l-29.5-12.6 C14.7,194.3,10,216.7,8.5,240H40.6z M64.3,156.5c7.8-14.9,17.2-28.8,28.1-41.5L69.7,92.3c-13.7,15.6-25.5,32.8-34.9,51.5 L64.3,156.5z M397,419.6c-13.9,12-29.4,22.3-46.1,30.4l11.9,29.8c20.7-9.9,39.8-22.6,56.9-37.6L397,419.6z M115,92.4 c13.9-12,29.4-22.3,46.1-30.4l-11.9-29.8c-20.7,9.9-39.8,22.6-56.8,37.6L115,92.4z M447.7,355.5c-7.8,14.9-17.2,28.8-28.1,41.5 l22.7,22.7c13.7-15.6,25.5-32.9,34.9-51.5L447.7,355.5z M471.4,272c-1.4,18.8-5.2,37-11.1,54.1l29.5,12.6 c7.5-21.1,12.2-43.5,13.6-66.8H471.4z M321.2,462c-15.7,5-32.2,8.2-49.2,9.4v32.1c21.2-1.4,41.7-5.4,61.1-11.7L321.2,462z M240,471.4c-18.8-1.4-37-5.2-54.1-11.1l-12.6,29.5c21.1,7.5,43.5,12.2,66.8,13.6V471.4z M462,190.8c5,15.7,8.2,32.2,9.4,49.2h32.1 c-1.4-21.2-5.4-41.7-11.7-61.1L462,190.8z M92.4,397c-12-13.9-22.3-29.4-30.4-46.1l-29.8,11.9c9.9,20.7,22.6,39.8,37.6,56.9 L92.4,397z M272,40.6c18.8,1.4,36.9,5.2,54.1,11.1l12.6-29.5C317.7,14.7,295.3,10,272,8.5V40.6z M190.8,50 c15.7-5,32.2-8.2,49.2-9.4V8.5c-21.2,1.4-41.7,5.4-61.1,11.7L190.8,50z M442.3,92.3L419.6,115c12,13.9,22.3,29.4,30.5,46.1 l29.8-11.9C470,128.5,457.3,109.4,442.3,92.3z M397,92.4l22.7-22.7c-15.6-13.7-32.8-25.5-51.5-34.9l-12.6,29.5 C370.4,72.1,384.4,81.5,397,92.4z">
+                                            </path>
+                                            <circle fill="currentColor" cx="256" cy="364" r="28">
+                                                <animate attributeType="XML" repeatCount="indefinite" dur="2s"
+                                                    attributeName="r" values="28;14;28;28;14;28;"></animate>
+                                                <animate attributeType="XML" repeatCount="indefinite" dur="2s"
+                                                    attributeName="opacity" values="1;0;1;1;0;1;"></animate>
+                                            </circle>
+                                            <path fill="currentColor" opacity="1"
+                                                d="M263.7,312h-16c-6.6,0-12-5.4-12-12c0-71,77.4-63.9,77.4-107.8c0-20-17.8-40.2-57.4-40.2c-29.1,0-44.3,9.6-59.2,28.7 c-3.9,5-11.1,6-16.2,2.4l-13.1-9.2c-5.6-3.9-6.9-11.8-2.6-17.2c21.2-27.2,46.4-44.7,91.2-44.7c52.3,0,97.4,29.8,97.4,80.2 c0,67.6-77.4,63.5-77.4,107.8C275.7,306.6,270.3,312,263.7,312z">
+                                                <animate attributeType="XML" repeatCount="indefinite" dur="2s"
+                                                    attributeName="opacity" values="1;0;0;0;0;1;"></animate>
+                                            </path>
+                                            <path fill="currentColor" opacity="0"
+                                                d="M232.5,134.5l7,168c0.3,6.4,5.6,11.5,12,11.5h9c6.4,0,11.7-5.1,12-11.5l7-168c0.3-6.8-5.2-12.5-12-12.5h-23 C237.7,122,232.2,127.7,232.5,134.5z">
+                                                <animate attributeType="XML" repeatCount="indefinite" dur="2s"
+                                                    attributeName="opacity" values="0;0;1;1;0;0;"></animate>
+                                            </path>
+                                        </g>
+                                    </svg><!-- <i style="color:#fff" class="fa fa-arrow-circle-o-right"> </i> Font Awesome fontawesome.com -->
+                                    <span style="color:#fff"> Unlimited</span> <span style="color:#3575b9">Domain
+                                        Hosting</span>
+                                </div>
+                                <div class="ls-l"
+                                    style="top: 315px; left: 819px; color: rgb(2, 2, 3); float: left; line-height: 28px; text-transform: capitalize; font-family: Ubuntu; font-size: 16px; white-space: nowrap; filter: none; width: auto; height: auto; padding: 0px; border-width: 0px; margin-left: 0px; margin-top: 0px; transform-origin: 50% 50% 0px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.002, 0, 0, 0, 1); opacity: 1; visibility: visible;"
+                                    data-ls="delayin:4000;"><svg style="color: #fff;"
+                                        class="svg-inline--fa fa-arrow-circle-o-right" aria-hidden="true"
+                                        focusable="false" data-prefix="fas" data-icon="arrow-circle-o-right" role="img"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                                        <g class="missing">
+                                            <path fill="currentColor"
+                                                d="M156.5,447.7l-12.6,29.5c-18.7-9.5-35.9-21.2-51.5-34.9l22.7-22.7C127.6,430.5,141.5,440,156.5,447.7z M40.6,272H8.5 c1.4,21.2,5.4,41.7,11.7,61.1L50,321.2C45.1,305.5,41.8,289,40.6,272z M40.6,240c1.4-18.8,5.2-37,11.1-54.1l-29.5-12.6 C14.7,194.3,10,216.7,8.5,240H40.6z M64.3,156.5c7.8-14.9,17.2-28.8,28.1-41.5L69.7,92.3c-13.7,15.6-25.5,32.8-34.9,51.5 L64.3,156.5z M397,419.6c-13.9,12-29.4,22.3-46.1,30.4l11.9,29.8c20.7-9.9,39.8-22.6,56.9-37.6L397,419.6z M115,92.4 c13.9-12,29.4-22.3,46.1-30.4l-11.9-29.8c-20.7,9.9-39.8,22.6-56.8,37.6L115,92.4z M447.7,355.5c-7.8,14.9-17.2,28.8-28.1,41.5 l22.7,22.7c13.7-15.6,25.5-32.9,34.9-51.5L447.7,355.5z M471.4,272c-1.4,18.8-5.2,37-11.1,54.1l29.5,12.6 c7.5-21.1,12.2-43.5,13.6-66.8H471.4z M321.2,462c-15.7,5-32.2,8.2-49.2,9.4v32.1c21.2-1.4,41.7-5.4,61.1-11.7L321.2,462z M240,471.4c-18.8-1.4-37-5.2-54.1-11.1l-12.6,29.5c21.1,7.5,43.5,12.2,66.8,13.6V471.4z M462,190.8c5,15.7,8.2,32.2,9.4,49.2h32.1 c-1.4-21.2-5.4-41.7-11.7-61.1L462,190.8z M92.4,397c-12-13.9-22.3-29.4-30.4-46.1l-29.8,11.9c9.9,20.7,22.6,39.8,37.6,56.9 L92.4,397z M272,40.6c18.8,1.4,36.9,5.2,54.1,11.1l12.6-29.5C317.7,14.7,295.3,10,272,8.5V40.6z M190.8,50 c15.7-5,32.2-8.2,49.2-9.4V8.5c-21.2,1.4-41.7,5.4-61.1,11.7L190.8,50z M442.3,92.3L419.6,115c12,13.9,22.3,29.4,30.5,46.1 l29.8-11.9C470,128.5,457.3,109.4,442.3,92.3z M397,92.4l22.7-22.7c-15.6-13.7-32.8-25.5-51.5-34.9l-12.6,29.5 C370.4,72.1,384.4,81.5,397,92.4z">
+                                            </path>
+                                            <circle fill="currentColor" cx="256" cy="364" r="28">
+                                                <animate attributeType="XML" repeatCount="indefinite" dur="2s"
+                                                    attributeName="r" values="28;14;28;28;14;28;"></animate>
+                                                <animate attributeType="XML" repeatCount="indefinite" dur="2s"
+                                                    attributeName="opacity" values="1;0;1;1;0;1;"></animate>
+                                            </circle>
+                                            <path fill="currentColor" opacity="1"
+                                                d="M263.7,312h-16c-6.6,0-12-5.4-12-12c0-71,77.4-63.9,77.4-107.8c0-20-17.8-40.2-57.4-40.2c-29.1,0-44.3,9.6-59.2,28.7 c-3.9,5-11.1,6-16.2,2.4l-13.1-9.2c-5.6-3.9-6.9-11.8-2.6-17.2c21.2-27.2,46.4-44.7,91.2-44.7c52.3,0,97.4,29.8,97.4,80.2 c0,67.6-77.4,63.5-77.4,107.8C275.7,306.6,270.3,312,263.7,312z">
+                                                <animate attributeType="XML" repeatCount="indefinite" dur="2s"
+                                                    attributeName="opacity" values="1;0;0;0;0;1;"></animate>
+                                            </path>
+                                            <path fill="currentColor" opacity="0"
+                                                d="M232.5,134.5l7,168c0.3,6.4,5.6,11.5,12,11.5h9c6.4,0,11.7-5.1,12-11.5l7-168c0.3-6.8-5.2-12.5-12-12.5h-23 C237.7,122,232.2,127.7,232.5,134.5z">
+                                                <animate attributeType="XML" repeatCount="indefinite" dur="2s"
+                                                    attributeName="opacity" values="0;0;1;1;0;0;"></animate>
+                                            </path>
+                                        </g>
+                                    </svg><!-- <i style="color:#fff" class="fa fa-arrow-circle-o-right"> </i> Font Awesome fontawesome.com -->
+                                    <span style="color:#fff"> Unlimited</span> <span style="color:#3575b9"> Hosting
+                                        Space</span>
+                                </div>
+                                <div class="ls-l"
+                                    style="top: 345px; left: 819px; color: rgb(2, 2, 3); float: left; line-height: 28px; text-transform: capitalize; font-family: Ubuntu; font-size: 16px; white-space: nowrap; filter: none; width: auto; height: auto; padding: 0px; border-width: 0px; margin-left: 0px; margin-top: 0px; transform-origin: 50% 50% 0px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.002, 0, 0, 0, 1); opacity: 1; visibility: visible;"
+                                    data-ls="delayin:4500;"><svg style="color: #fff;"
+                                        class="svg-inline--fa fa-arrow-circle-o-right" aria-hidden="true"
+                                        focusable="false" data-prefix="fas" data-icon="arrow-circle-o-right" role="img"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                                        <g class="missing">
+                                            <path fill="currentColor"
+                                                d="M156.5,447.7l-12.6,29.5c-18.7-9.5-35.9-21.2-51.5-34.9l22.7-22.7C127.6,430.5,141.5,440,156.5,447.7z M40.6,272H8.5 c1.4,21.2,5.4,41.7,11.7,61.1L50,321.2C45.1,305.5,41.8,289,40.6,272z M40.6,240c1.4-18.8,5.2-37,11.1-54.1l-29.5-12.6 C14.7,194.3,10,216.7,8.5,240H40.6z M64.3,156.5c7.8-14.9,17.2-28.8,28.1-41.5L69.7,92.3c-13.7,15.6-25.5,32.8-34.9,51.5 L64.3,156.5z M397,419.6c-13.9,12-29.4,22.3-46.1,30.4l11.9,29.8c20.7-9.9,39.8-22.6,56.9-37.6L397,419.6z M115,92.4 c13.9-12,29.4-22.3,46.1-30.4l-11.9-29.8c-20.7,9.9-39.8,22.6-56.8,37.6L115,92.4z M447.7,355.5c-7.8,14.9-17.2,28.8-28.1,41.5 l22.7,22.7c13.7-15.6,25.5-32.9,34.9-51.5L447.7,355.5z M471.4,272c-1.4,18.8-5.2,37-11.1,54.1l29.5,12.6 c7.5-21.1,12.2-43.5,13.6-66.8H471.4z M321.2,462c-15.7,5-32.2,8.2-49.2,9.4v32.1c21.2-1.4,41.7-5.4,61.1-11.7L321.2,462z M240,471.4c-18.8-1.4-37-5.2-54.1-11.1l-12.6,29.5c21.1,7.5,43.5,12.2,66.8,13.6V471.4z M462,190.8c5,15.7,8.2,32.2,9.4,49.2h32.1 c-1.4-21.2-5.4-41.7-11.7-61.1L462,190.8z M92.4,397c-12-13.9-22.3-29.4-30.4-46.1l-29.8,11.9c9.9,20.7,22.6,39.8,37.6,56.9 L92.4,397z M272,40.6c18.8,1.4,36.9,5.2,54.1,11.1l12.6-29.5C317.7,14.7,295.3,10,272,8.5V40.6z M190.8,50 c15.7-5,32.2-8.2,49.2-9.4V8.5c-21.2,1.4-41.7,5.4-61.1,11.7L190.8,50z M442.3,92.3L419.6,115c12,13.9,22.3,29.4,30.5,46.1 l29.8-11.9C470,128.5,457.3,109.4,442.3,92.3z M397,92.4l22.7-22.7c-15.6-13.7-32.8-25.5-51.5-34.9l-12.6,29.5 C370.4,72.1,384.4,81.5,397,92.4z">
+                                            </path>
+                                            <circle fill="currentColor" cx="256" cy="364" r="28">
+                                                <animate attributeType="XML" repeatCount="indefinite" dur="2s"
+                                                    attributeName="r" values="28;14;28;28;14;28;"></animate>
+                                                <animate attributeType="XML" repeatCount="indefinite" dur="2s"
+                                                    attributeName="opacity" values="1;0;1;1;0;1;"></animate>
+                                            </circle>
+                                            <path fill="currentColor" opacity="1"
+                                                d="M263.7,312h-16c-6.6,0-12-5.4-12-12c0-71,77.4-63.9,77.4-107.8c0-20-17.8-40.2-57.4-40.2c-29.1,0-44.3,9.6-59.2,28.7 c-3.9,5-11.1,6-16.2,2.4l-13.1-9.2c-5.6-3.9-6.9-11.8-2.6-17.2c21.2-27.2,46.4-44.7,91.2-44.7c52.3,0,97.4,29.8,97.4,80.2 c0,67.6-77.4,63.5-77.4,107.8C275.7,306.6,270.3,312,263.7,312z">
+                                                <animate attributeType="XML" repeatCount="indefinite" dur="2s"
+                                                    attributeName="opacity" values="1;0;0;0;0;1;"></animate>
+                                            </path>
+                                            <path fill="currentColor" opacity="0"
+                                                d="M232.5,134.5l7,168c0.3,6.4,5.6,11.5,12,11.5h9c6.4,0,11.7-5.1,12-11.5l7-168c0.3-6.8-5.2-12.5-12-12.5h-23 C237.7,122,232.2,127.7,232.5,134.5z">
+                                                <animate attributeType="XML" repeatCount="indefinite" dur="2s"
+                                                    attributeName="opacity" values="0;0;1;1;0;0;"></animate>
+                                            </path>
+                                        </g>
+                                    </svg><!-- <i style="color:#fff" class="fa fa-arrow-circle-o-right"> </i> Font Awesome fontawesome.com -->
+                                    <span style="color:#fff"> Unlimited</span> <span style="color:#3575b9"> File
+                                        Transfer</span>
+                                </div>
+                                <div class="ls-l"
+                                    style="top: 375px; left: 819px; color: rgb(2, 2, 3); float: left; line-height: 28px; text-transform: capitalize; font-family: Ubuntu; font-size: 16px; white-space: nowrap; filter: none; width: auto; height: auto; padding: 0px; border-width: 0px; margin-left: 0px; margin-top: 0px; transform-origin: 50% 50% 0px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.002, 0, 0, 0, 1); opacity: 1; visibility: visible;"
+                                    data-ls="delayin:5000;"><svg style="color: #fff;"
+                                        class="svg-inline--fa fa-arrow-circle-o-right" aria-hidden="true"
+                                        focusable="false" data-prefix="fas" data-icon="arrow-circle-o-right" role="img"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                                        <g class="missing">
+                                            <path fill="currentColor"
+                                                d="M156.5,447.7l-12.6,29.5c-18.7-9.5-35.9-21.2-51.5-34.9l22.7-22.7C127.6,430.5,141.5,440,156.5,447.7z M40.6,272H8.5 c1.4,21.2,5.4,41.7,11.7,61.1L50,321.2C45.1,305.5,41.8,289,40.6,272z M40.6,240c1.4-18.8,5.2-37,11.1-54.1l-29.5-12.6 C14.7,194.3,10,216.7,8.5,240H40.6z M64.3,156.5c7.8-14.9,17.2-28.8,28.1-41.5L69.7,92.3c-13.7,15.6-25.5,32.8-34.9,51.5 L64.3,156.5z M397,419.6c-13.9,12-29.4,22.3-46.1,30.4l11.9,29.8c20.7-9.9,39.8-22.6,56.9-37.6L397,419.6z M115,92.4 c13.9-12,29.4-22.3,46.1-30.4l-11.9-29.8c-20.7,9.9-39.8,22.6-56.8,37.6L115,92.4z M447.7,355.5c-7.8,14.9-17.2,28.8-28.1,41.5 l22.7,22.7c13.7-15.6,25.5-32.9,34.9-51.5L447.7,355.5z M471.4,272c-1.4,18.8-5.2,37-11.1,54.1l29.5,12.6 c7.5-21.1,12.2-43.5,13.6-66.8H471.4z M321.2,462c-15.7,5-32.2,8.2-49.2,9.4v32.1c21.2-1.4,41.7-5.4,61.1-11.7L321.2,462z M240,471.4c-18.8-1.4-37-5.2-54.1-11.1l-12.6,29.5c21.1,7.5,43.5,12.2,66.8,13.6V471.4z M462,190.8c5,15.7,8.2,32.2,9.4,49.2h32.1 c-1.4-21.2-5.4-41.7-11.7-61.1L462,190.8z M92.4,397c-12-13.9-22.3-29.4-30.4-46.1l-29.8,11.9c9.9,20.7,22.6,39.8,37.6,56.9 L92.4,397z M272,40.6c18.8,1.4,36.9,5.2,54.1,11.1l12.6-29.5C317.7,14.7,295.3,10,272,8.5V40.6z M190.8,50 c15.7-5,32.2-8.2,49.2-9.4V8.5c-21.2,1.4-41.7,5.4-61.1,11.7L190.8,50z M442.3,92.3L419.6,115c12,13.9,22.3,29.4,30.5,46.1 l29.8-11.9C470,128.5,457.3,109.4,442.3,92.3z M397,92.4l22.7-22.7c-15.6-13.7-32.8-25.5-51.5-34.9l-12.6,29.5 C370.4,72.1,384.4,81.5,397,92.4z">
+                                            </path>
+                                            <circle fill="currentColor" cx="256" cy="364" r="28">
+                                                <animate attributeType="XML" repeatCount="indefinite" dur="2s"
+                                                    attributeName="r" values="28;14;28;28;14;28;"></animate>
+                                                <animate attributeType="XML" repeatCount="indefinite" dur="2s"
+                                                    attributeName="opacity" values="1;0;1;1;0;1;"></animate>
+                                            </circle>
+                                            <path fill="currentColor" opacity="1"
+                                                d="M263.7,312h-16c-6.6,0-12-5.4-12-12c0-71,77.4-63.9,77.4-107.8c0-20-17.8-40.2-57.4-40.2c-29.1,0-44.3,9.6-59.2,28.7 c-3.9,5-11.1,6-16.2,2.4l-13.1-9.2c-5.6-3.9-6.9-11.8-2.6-17.2c21.2-27.2,46.4-44.7,91.2-44.7c52.3,0,97.4,29.8,97.4,80.2 c0,67.6-77.4,63.5-77.4,107.8C275.7,306.6,270.3,312,263.7,312z">
+                                                <animate attributeType="XML" repeatCount="indefinite" dur="2s"
+                                                    attributeName="opacity" values="1;0;0;0;0;1;"></animate>
+                                            </path>
+                                            <path fill="currentColor" opacity="0"
+                                                d="M232.5,134.5l7,168c0.3,6.4,5.6,11.5,12,11.5h9c6.4,0,11.7-5.1,12-11.5l7-168c0.3-6.8-5.2-12.5-12-12.5h-23 C237.7,122,232.2,127.7,232.5,134.5z">
+                                                <animate attributeType="XML" repeatCount="indefinite" dur="2s"
+                                                    attributeName="opacity" values="0;0;1;1;0;0;"></animate>
+                                            </path>
+                                        </g>
+                                    </svg><!-- <i style="color:#fff" class="fa fa-arrow-circle-o-right"> </i> Font Awesome fontawesome.com --><span
+                                        style="color:#fff"> Unlimited</span> <span style="color:#3575b9"> Email
+                                        Accounts</span> </div>
+                                <p class="ls-l"
+                                    style="top: 300px; left: 430px; font-weight: 400; z-index: 5; padding: 0px 0px 0px 640px; font-family: Ubuntu, &quot;Open Sans&quot;, sans-serif; font-size: 50px; line-height: 46px; color: rgb(53, 117, 185); white-space: nowrap; filter: none; width: auto; height: auto; border-width: 0px; margin-left: 0px; margin-top: 0px; transform-origin: left 50% 0px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.002, 0, 0, 0, 1); opacity: 1; visibility: visible;"
+                                    data-ls="offsetxin:0;offsetyin:-100;durationin:1500;delayin:5000;transformoriginin:left 50% 0;offsetxout:0;rotateyout:-90;transformoriginout:left 50% 0;">
+                                </p>
+                                <div class="ls-l"
+                                    style="top: 360px; left: 1078px; font-weight: 100; z-index: 3; font-family: Ubuntu; font-size: 24px; line-height: 26px; color: rgb(2, 2, 3); white-space: nowrap; filter: none; width: auto; height: auto; padding: 0px; border-width: 0px; margin-left: 0px; margin-top: 0px; transform-origin: 50% 50% 0px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.002, 0.31106, 0, 0, 1); opacity: 0.999556; visibility: visible;"
+                                    data-ls="offsetxin:700;durationin:1500;delayin:5500;"></div>
+                                <div class="ls-l"
+                                    style="top: 435px; left: 928px; font-weight: 100; z-index: 3; font-family: Ubuntu; font-size: 14px; line-height: 26px; color: rgb(2, 2, 3); white-space: nowrap; filter: none; width: auto; height: auto; padding: 0px; border-width: 0px; margin-left: 0px; margin-top: 0px; transform-origin: 50% 50% 0px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.002, 94.9586, 0, 0, 1); opacity: 0.0504145; visibility: visible;"
+                                    data-ls="offsetxin:100;delayin:6500;">*Offer for a limited period</div>
+                                <div class="ls-l"
+                                    style="top: 0px; left: 78px; white-space: nowrap; filter: none; width: auto; height: auto; font-size: 14px; padding: 0px; border-width: 0px; margin-left: 0px; margin-top: 0px; transform-origin: 50% 50% 0px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.002, 0, 0, 0, 1); opacity: 1; visibility: visible;">
+                                </div>
+                                <!--<div class="ls-l ls-button" style="top:470px;left:807px;white-space: nowrap;" data-ls="offsetxin:0;offsetyin:100;delayin:7000;durationout:450;scalexout:0;scaleyout:0;">
+<a href="#" class="dt-sc-button ico-button"> <span> View Plans </span> <i class="ico-btn-image icon-eye"></i></a>
+</div>-->
+                                <p class="ls-l"
+                                    style="top: 266px; left: 1048px; width: 1px; height: 155px; background: none; white-space: nowrap; filter: none; font-size: 14px; padding: 0px; border-width: 0px; margin-left: 0px; margin-top: 0px; transform-origin: 50% 50% 0px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.002, 0, 0, 0, 1); opacity: 1; visibility: visible;"
+                                    data-ls="delayin:5000;"> </p>
+                            </div>
+                            <div class="ls-circle-timer" style="display: block;">
+                                <div class="ls-ct-left">
+                                    <div class="ls-ct-rotate"
+                                        style="transform: matrix(0.70085, 0.71329, -0.71329, 0.70085, 0, 0);">
+                                        <div class="ls-ct-hider">
+                                            <div class="ls-ct-half"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ls-ct-right">
+                                    <div class="ls-ct-rotate" style="transform: matrix(-1, 0, 0, -1, 0, 0);">
+                                        <div class="ls-ct-hider">
+                                            <div class="ls-ct-half"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ls-ct-center"></div>
+                            </div>
+                        </div>
+                        <!-- Slide-->
+                        <div class="ls-loading-container" style="z-index: -1; display: none;">
+                            <div class="ls-loading-indicator"></div>
+                        </div><a class="ls-nav-prev" href="#" style="visibility: visible; display: none;"></a><a
+                            class="ls-nav-next" href="#" style="visibility: visible; display: none;"></a>
+                        <div class="ls-bottom-nav-wrapper" style="visibility: visible;"><a
+                                class="ls-nav-start ls-nav-start-active" href="#"></a><span
+                                class="ls-bottom-slidebuttons"><a href="#" class=""></a><a href="#" class=""></a><a
+                                    href="#" class="ls-nav-active"></a>
+                                <div class="ls-thumbnail-hover" style="width: 100px; height: 60px;">
+                                    <div class="ls-thumbnail-hover-inner" style="visibility: hidden; display: block;">
+                                        <div class="ls-thumbnail-hover-bg"></div>
+                                        <div class="ls-thumbnail-hover-img" style="width: 100px; height: 60px;"><img
+                                                style="height: 60px;"></div><span></span>
+                                    </div>
+                                </div>
+                            </span><a class="ls-nav-stop" href="#"></a></div>
+                        <div class="ls-shadow"></div>
+                    </div>
+                </div>
+                <!-- BLOCK TAB MODULE -->
+                <section data-theme-color="dark-theme" id="tabModule" data-label="Our mission"
+                    class="block-tabModule container container-home js-anchor">
+                    <p class="block-tabModule__instruction">
+                        <span class="block-tabModule__instruction-desktop">Hover to discover more</span>
+                        <span class="block-tabModule__instruction-mobile">Swipe to discover more</span>
+                    </p>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <img class="clipped-img appear" src="havas-content/uploads/2023/06/about1.webp" alt=""
+                                    data-reverse="1" loading="lazy">
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="block-tabModule__content">
+                                    <div class="block-tabModule__content-top">
+                                        <h2 class="title-animated">Preparing for your <strong
+                                                class="js-hover-content active"> Success</strong>,<br />
+                                            We Provide Best IT <strong class="js-hover-content active">
+                                                Solutions!</strong>
+                                        </h2>
+                                        <p>We are a full-service digital solutions provider, dedicated to helping
+                                            businesses thrive in the digital age. With a diverse team of experts, we
+                                            specialize in creating impactful, user- centered digital experiences that
+                                            drive growth, innovation and success. With a focus on innovation, quality
+                                            and client satisfaction, we partner with businesses of all sizes from
+                                            startups to established enterprises to bring their digital vision to life.
+                                            Whether you need a new website, a custom app or a robust digital marketing
+                                            strategy, we are here to help you achieve your goals and stay ahead in a
+                                            fast-evolving digital landscape.</p>
+                                        <a href="who-we-are/our-mission/index.html" class="btn red"><span>Our
+                                                mission</span><span class="btn-arrow"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- BLOCK SERVICES  -->
+                <style>
+                    .info-buttons {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 15px;
+                    }
+
+                    .info-btn {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 18px 20px;
+                        background-color: #ffffff;
+                        border-radius: 6px;
+                        border: 1px solid #eee;
+                        font-weight: 600;
+                        text-decoration: none;
+                        color: #000;
+                        transition: all 0.3s ease;
+                    }
+
+                    .icon-box {
+                        background-color: #00a39b13;
+                        color: #00a39b;
+                        padding: 6px 10px;
+                        border-radius: 4px;
+                        transition: all 0.3s ease;
+                    }
+
+                    .info-btn:hover,
+                    .info-btn.active {
+                        background-color: #00a39b47;
+                    }
+
+                    .info-btn:hover .icon-box,
+                    .info-btn.active .icon-box {
+                        background-color: #00a39b;
+                        color: #fff;
+                        transform: translateX(5px);
+                    }
+
+                    .info-content img {
+                        max-width: 100%;
+                        border-radius: 8px;
+                    }
+
+                    .info-content {
+                        height: 100%;
+                    }
+
+                    /* Fade animation */
+                    .fade-in {
+                        animation: fadeIn 0.6s ease-in-out;
+                    }
+
+                    @keyframes fadeIn {
+                        from {
+                            opacity: 0;
+                            transform: translateY(10px);
+                        }
+
+                        to {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                    }
+
+                    .blockimg {
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                        overflow: hidden;
+                    }
+
+                    .blockimg img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        /* or contain, fill, etc. depending on the need */
+                        display: block;
+                    }
+                </style>
+                <section id="services" data-label="Our services" class="block-services js-anchor js-white-theme">
+                    <!-- <div class="container"> -->
+                    <div class="container my-5">
+                        <div class="block-services__left">
+                            <div class="block-services__left__content" style="width: 100%;">
+                                <h2><span>Our services</span></h2>
+                                <a href="what-we-do/index.html" class="btn red"><span>What we do</span><span
+                                        class="btn-arrow"></span></a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- Left Buttons -->
+                            <div class="col-lg-4 col-mb-4 col-4">
+                                <div class="info-buttons">
+                                    <a href="#" class="info-btn active fs-2" data-title="Website Designing"
+                                        data-desc="Our website designing services combine innovative design, seamless functionality and user-centric approaches to create captivating digital experiences. Trust us to bring your online vision to life with excellence and precision."
+                                        data-img="web-design.jpg">
+                                        Website Designing <span class="icon-box">➔</span>
+                                    </a>
+
+                                    <a href="#" class="info-btn fs-2" data-title="Digital Marketing"
+                                        data-desc="Elevate your brand's online presence with our comprehensive digital marketing services. From strategic planning to execution, we deploy cutting-edge techniques across SEO, Social Media, PPC, Content Marketing and more."
+                                        data-img="digital mart.webp">
+                                        Digital Marketing <span class="icon-box">➔</span>
+                                    </a>
+
+                                    <a href="#" class="info-btn fs-2" data-title="Web Application"
+                                        data-desc="With our web application services, we deliver tailored solutions designed to meet your unique business needs. From concept to deployment, our team ensures seamless functionality, intuitive user experience and scalability."
+                                        data-img="web-application.webp">
+                                        Web Application <span class="icon-box">➔</span>
+                                    </a>
+                                    <a href="#" class="info-btn fs-2" data-title="Graphic Designing"
+                                        data-desc="Elevate your brand with our comprehensive graphic design services. From stunning logos and captivating visuals to engaging marketing materials, we bring creativity and expertise to every project."
+                                        data-img="web-design.jpg">
+                                        Graphic Designing <span class="icon-box">➔</span>
+                                    </a>
+                                    <a href="#" class="info-btn fs-2" data-title="Ecommerce Solutions"
+                                        data-desc="Convert your visitors into customers with E-Commerce solutions by Innoweb. The online retail market is booming, So our developers understand what it takes to make your online business successful."
+                                        data-img="digital mart.webp">
+                                        Ecommerce Solutions <span class="icon-box">➔</span>
+                                    </a>
+                                    <a href="#" class="info-btn fs-2" data-title="Training & Certification"
+                                        data-desc="Training and certification typically refer to programs or processes designed to enhance skills and knowledge in a particular field or discipline."
+                                        data-img="web-application.webp">
+                                        Training & Certification <span class="icon-box">➔</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Image -->
+                            <div class="col-lg-8 col-md-8 col-8">
+                                <div class="row h-100">
+                                    <div class="col-lg-6 col-mb-6 col-sm-12">
+                                        <div class="block-services__left__img blockimg">
+                                            <img id="info-img" src="web-design.jpg" alt="info image" data-aos="fade-up"
+                                                class="img-fluid" />
+                                        </div>
+                                    </div>
+
+                                    <!-- Title + Description -->
+                                    <div class="col-lg-6 col-md-6 col-sm-12 d-flex align-items-center">
+                                        <div class="info-content p-4 bg-light rounded w-100">
+                                            <h2 id="info-title" data-aos="fade-left" class="fs-3 my-4">Our Mission</h2>
+                                            <p id="info-desc" data-aos="fade-left" class="fs-4 text-justify">
+                                                Empowering Minds: GNIM's mission is to ignite minds with a dynamic blend
+                                                of
+                                                intellectually riveting education and real-world practicality. We
+                                                cultivate a vibrant
+                                                community, embracing diversity and social responsibility.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                </section>
+
+                <div class="js-modal">
+                    <section data-theme-color="dark-theme" id="ourWork" data-label="Our work"
+                        class="block-ourWork container container-home js-anchor">
+                        <div class="block-ourWork__content">
+                            <h2><span>Solutions & Offerings</span></h2>
+                            <a href="work/index.html" class="btn red"><span>See more work</span><span
+                                    class="btn-arrow"></span></a>
+                        </div>
+                        <ul class="block-ourWork__list">
+                            <li class="block-ourWork__list-item">
+                                <div class="work__img">
+                                    <img src="havas-content/uploads/2023/02/Gerative-AI.webp" alt="" loading="lazy"
+                                        width="1144" height="634">
+                                </div>
+                                <div class="work__description">
+                                    <p>Innoweb</p>
+                                </div>
+                                <h3 class="work__title">Generative AI</h3>
+                                <button aria-haspopup="dialog" aria-controls="ourwork-modal"
+                                    class="js-modal__item js-modal__slider smart-cursor-focus js-start-focus-trap"
+                                    data-api-detail="https://www.havas.com/wp-json/havas-group/v2/client-case-detail/10319?lang=en"
+                                    data-popin-title="Generative AI : a project realised by Innoweb"><span
+                                        class="sr-only">Generative AI
+                                        video</span></button>
+                                <span class="smart-cursor">View</span>
+                            </li>
+                            <li class="block-ourWork__list-item">
+                                <div class="work__img">
+                                    <img src="havas-content/uploads/2023/07/experience.webp" alt="" loading="lazy"
+                                        width="1144" height="332">
+                                </div>
+                                <div class="work__description">
+                                    <p>Innoweb</p>
+                                </div>
+                                <h3 class="work__title">Experience Transformation</h3>
+                                <button aria-haspopup="dialog" aria-controls="ourwork-modal"
+                                    class="js-modal__item js-modal__slider smart-cursor-focus js-start-focus-trap"
+                                    data-api-detail="https://www.havas.com/wp-json/havas-group/v2/client-case-detail/10311?lang=en"
+                                    data-popin-title="Experience Transformation : a project realised by Innoweb"><span
+                                        class="sr-only">Experience Transformation
+                                        video</span></button>
+                                <span class="smart-cursor">View</span>
+                            </li>
+                            <li class="block-ourWork__list-item">
+                                <div class="work__img">
+                                    <img src="havas-content/uploads/2022/02/costumer.webp" alt="" loading="lazy"
+                                        width="1144" height="649">
+                                </div>
+                                <div class="work__description">
+                                    <p>Innoweb</p>
+                                </div>
+                                <h3 class="work__title">Customer Engagement</h3>
+                                <button aria-haspopup="dialog" aria-controls="ourwork-modal"
+                                    class="js-modal__item js-modal__slider smart-cursor-focus js-start-focus-trap"
+                                    data-api-detail="https://www.havas.com/wp-json/havas-group/v2/client-case-detail/8970?lang=en"
+                                    data-popin-title="Customer Engagement : a project realised by Innoweb"><span
+                                        class="sr-only">Customer Engagement</span></button>
+                                <span class="smart-cursor">View</span>
+                            </li>
+                        </ul>
+                    </section>
+                    <div class="js-modal__modal js-focus-trap" id="ourwork-modal" role="dialog" aria-modal="true"
+                        data-noresults="No results">
+                        <div class="js-modal__modal--container">
+                            <button class="js-modal__modal--close-btn js-end-focus-trap"><span
+                                    class="sr-only">close</span>×</button>
+                            <div class="js-modal__modal--loader c-loader" data-cursor-hover>
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="js-modal__modal--content">
+                                <div class="js-modal__slider" aria-roledescription="carousel" id="workcarrousel"
+                                    aria-live="polite">
+                                </div>
+                                <button aria-controls="workcarrousel" aria-label="Previous slide"
+                                    class="js-modal__prev">❮</button>
+                                <button aria-controls="workcarrousel" aria-label="Next slide"
+                                    class="js-modal__next">❯</button>
+                                <div class="js-modal__dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- !BLOCK SERVICES  -->
+                <!-- !BLOCK TAB MODULE -->
+	<link rel='stylesheet' href='https://assets.codepen.io/573855/swiper.min.css'>
+	<link rel="stylesheet" href="./style.css">
+
+                <div class="carousel" id="carousel_1">
+                    <div class="wrapper">
+                        <div class="swiper-container">
+                            <div class="swiper-column-gap"></div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide no-interaction">
+                                    <div class="card">
+
+                                    </div>
+                                </div>
+                                <div class="swiper-slide no-interaction">
+                                    <div class="card">
+
+                                    </div>
+                                </div>
+                                <div class="swiper-slide no-interaction">
+                                    <div class="card">
+                                        <div class="media-container">
+                                            <picture>
+                                                <source
+                                                    srcset="https://www.lessrain.com/dev/images-2025/carousel/lr-demo-img-06-300x300.webp 300w, https://www.lessrain.com/dev/images-2025/carousel/lr-demo-img-06-435x435.webp 435w, https://www.lessrain.com/dev/images-2025/carousel/lr-demo-img-06-820x820.webp 820w"
+                                                    sizes="(max-width:51.29875em) 100vw, 500px">
+                                                <img class="fit-cover middle-center"
+                                                    src="https://www.lessrain.com/dev/images-2025/carousel/lr-demo-img-06.png"
+                                                    width="1024" height="1024"
+                                                    alt="Swirling paper chaos in industrial yard" decoding="async">
+                                            </picture>
+                                        </div>
+                                        <div class="card-text">
+                                            <h3 class='title'>Twister of Sheets</h3>
+                                            <p>A whirlwind of tangled wires and flying sheets twists through a barren
+                                                yard, captured mid-motion like a storm made of sketches.</p>
+                                            <a href="https://codepen.io/luis-lessrain/pen/ogNKBmx"
+                                                class="cta-button"><span class="text">Glitchfy More</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide no-interaction">
+                                    <div class="card">
+
+                                    </div>
+                                </div>
+                                <div class="swiper-slide no-interaction">
+                                    <div class="card">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script src='https://assets.codepen.io/573855/utils-v3.min.js?v=3'></script>
+                <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script>
+                <script src='https://assets.codepen.io/16327/ScrollTrigger.min.js?v=3.12'></script>
+                <script src='https://assets.codepen.io/16327/ScrollSmoother.min.js?v=3.12'></script>
+                <script src='https://assets.codepen.io/573855/swiper.min.js'></script>
+                <script src="./script.js"></script>
+
+                <!-- BLOCK DARE  -->
+                <section data-theme-color="dark-theme" id="dare" data-label="Our magazine" class="block-dare js-anchor"
+                    style="background-color:#cf904a">
+                    <div class="block-dare__img">
+                        <img src="havas-content/uploads/2024/02/post.jpg" alt="Dare magazine cover Fall/Winter 2023"
+                            loading="lazy">
+                    </div>
+                    <div class="block-dare__content">
+                        <h3><span>New Edition</span></h3>
+                        <h2><span>Dare! #10</span></h2>
+                        <p><span>In collaboration with Hoy by Havas Argentina</span></p>
+                        <a href="dare-10/index.html" target="_blank" class="btn"><span>Read it now</span><span
+                                class="btn-arrow"></span></a>
+                    </div>
+                </section>
+                <!-- !BLOCK DARE  -->
+
+            </div>
+            <div class="menuFixed">
+                <ul class="menuFixed__bottom">
+                    <li class="menuFixed__bottom-item">
+                        <a class="btn-underline full--" href="find-us/index.html" target="_self"
+                            title="Find an agency">Find an agency</a>
+                    </li>
+                    <li class="menuFixed__bottom-item">
+                        <button class="btn-underline c-contact_toggle js-start-focus-trap" aria-haspopup="dialog"
+                            aria-controls="contact-modal">
+                            <span class="comment"><i aria-hidden="true"
+                                    class="icon-comment"></i><span></span></span>Want to connect? </button>
+                    </li>
+                </ul>
+            </div>
+            <!-- !BLOCK MENU STICKY  -->
+            <div class="c-contact js-focus-trap" id="contact-modal" aria-labelledby="contact-modal-title" role="dialog"
+                aria-modal="true">
+                <div class="c-contact__overlay"></div>
+                <div class="c-contact__container">
+
+                    <div class="c-contact__content">
+                        <h2 class="h2" id="contact-modal-title">Want to connect?</h2>
+                        <p class="question"><strong>Are you looking for communication services?<br />
+                                Are you a talent looking to join us?</strong><br><br>
+                            <strong>Send us a message at</strong> <strong><a
+                                    href="mailto:c&#111;n&#110;ec&#116;&#64;&#104;&#97;&#118;&#97;s&#46;&#99;om">&#99;o&#110;&#110;&#101;&#99;t&#64;&#104;av&#97;s.c&#111;&#109;</a>.
+                            </strong><br />
+                            We'll get back to you as soon as possible.
+                        </p>
+                    </div>
+                    <button class="c-contact__close js-end-focus-trap"><i aria-hidden="true"
+                            class="icon-close"></i><span class="simpleLink black--">Close</span></button>
+                </div>
+            </div>
+        </main>
+        <footer data-wpr-lazyrender="1" class="footer">
+            <div class="footer__line">
+                <ul class="footer__list">
+                    <li><a href="who-we-are/villages/index.html" target="_self" title="Havas Villages">Havas
+                            Villages</a></li>
+                    <li><a href="dare/index.html" target="_self" title="Dare! Magazine">Dare! Magazine</a></li>
+
+                    <li><a href="press_release/meaningful-brands-2019-press-release/index.html" target="_self"
+                            title="Meaningful Brands">Meaningful Brands</a></li>
+                    <li><a href="prosumer-reports/index.html" target="_self" title="Prosumer Reports">Prosumer
+                            Reports</a></li>
+                </ul>
+                <ul class="footer__list rs--">
+                    <li><a href="https://fr.linkedin.com/company/havasgroup" target="_blank" class="small--"
+                            rel="external nofollow" title="Havas on LinkedIn"><i aria-hidden="true"
+                                class="icon-linkedin"></i><span class="sr-only">Havas on LinkedIn</span></a></li>
+                    <li><a href="https://www.facebook.com/HavasGroup" target="_blank" rel="external nofollow"
+                            title="Havas on Facebook"><i aria-hidden="true" class="icon-facebook"></i><span
+                                class="sr-only">Havas on Facebook</span></a></li>
+                    <li><a href="https://twitter.com/HavasGroup" target="_blank" class="small--" rel="external nofollow"
+                            title="Havas on Twitter"><i aria-hidden="true" class="icon-twitter"></i><span
+                                class="sr-only">Havas on Twitter</span></a></li>
+                    <li><a href="https://www.instagram.com/havasgroup/" target="_blank" rel="external nofollow"
+                            title="Havas on Instagram"><i aria-hidden="true" class="icon-instagram"></i><span
+                                class="sr-only">Havas on Instagram</span></a></li>
+                </ul>
+            </div>
+            <div class="footer__line" role="contentinfo">
+                <ul id="menu-footer-menu" class="footer__list">
+                    <li id="menu-item-2719"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2719"><a
+                            href="legal-notices/index.html">Legal Notices</a></li>
+                    <li id="menu-item-8858"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8858"><a
+                            href="general-terms-and-conditions-of-use/index.html">General Terms and Conditions of
+                            Use</a></li>
+                    <li id="menu-item-2717"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2717"><a
+                            href="data-protection-policy/index.html">Data Protection Policy</a></li>
+                    <li id="menu-item-10373"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10373"><a
+                            href="havas-n-a-privacy-notice/index.html">Havas N.A. Privacy Notice</a></li>
+                    <li id="menu-item-2718"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2718"><a
+                            href="cookie-policy/index.html">Cookie Policy</a></li>
+                    <li id="menu-item-157"
+                        class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-157">
+                        <a href="index.html#rgpd" aria-current="page">Cookie settings</a>
+                    </li>
+                    <li id="menu-item-15890"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15890"><a
+                            href="sitemap/index.html">Sitemap</a></li>
+                    <li id="menu-item-15936"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15936"><a
+                            href="accessibilite/index.html">Accessibility</a></li>
+                </ul>
+                <div class="footer__list">
+                    <span>© 2023 Havas</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <script>
+        const buttons = document.querySelectorAll(".info-btn");
+        const title = document.getElementById("info-title");
+        const desc = document.getElementById("info-desc");
+        const image = document.getElementById("info-img");
+
+        function applyFade(el) {
+            el.classList.remove("fade-in");
+            void el.offsetWidth; // reflow
+            el.classList.add("fade-in");
+        }
+
+        buttons.forEach(btn => {
+            btn.addEventListener("mouseenter", () => {
+                buttons.forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+
+                // Update content
+                title.textContent = btn.getAttribute("data-title");
+                desc.textContent = btn.getAttribute("data-desc");
+                image.src = btn.getAttribute("data-img");
+                image.alt = btn.getAttribute("data-title");
+
+                // Trigger fade
+                applyFade(title);
+                applyFade(desc);
+                applyFade(image);
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: false,
+            duration: 1000,
+        });
+    </script>
+    <script type="text/javascript" id="havas_group-main-js-extra">
+        /* <![CDATA[ */
+        var data_api = { "url_agencies": "https:\/\/www.havas.com\/wp-json\/havas-group\/v2\/agencies\/?lang=en", "url_countries": "https:\/\/www.havas.com\/wp-json\/havas-group\/v2\/countries\/?lang=en", "url_press_releases": "https:\/\/www.havas.com\/wp-json\/havas-group\/v1\/press-releases\/?lang=en", "url_prosumer_reports": "https:\/\/www.havas.com\/wp-json\/havas-group\/v1\/prosumer-reports\/?lang=en", "url_contact": "https:\/\/www.havas.com\/wp-json\/df-contact\/v1\/save\/?lang=en", "agencies_api_partner_key": "231d958e9410aa7d573800c021515647", "url_bourse": "https:\/\/www.havas.com\/wp-json\/havas-group\/v1\/bourse\/?lang=en", "url_bourse_graphique": "https:\/\/www.havas.com\/wp-json\/havas-group\/v1\/bourse-history\/?lang=en" };
+        /* ]]> */
+    </script>
+    <!-- <script src="assets/js/app.js" id="havas_group-main-js"></script> -->
+    <script type="text/javascript">
+        (function () {
+            var expirationDate = new Date();
+            expirationDate.setTime(expirationDate.getTime() + 31536000 * 1000);
+            document.cookie = "pll_language=en; expires=" + expirationDate.toUTCString() + "; path=/; secure; SameSite=None";
+        }());
+
+    </script>
+    <!-- Captcha script -->
+    <script src="../unpkg.com/friendly-challenge%400.9.11/widget.module.min.js" async defer></script>
+    <script nomodule src="../unpkg.com/friendly-challenge%400.9.11/widget.min.js" async defer></script>
+    <script>
+        window.captchaCallback = function (solution) {
+            document.querySelector('#solution').value = solution
+        }
+    </script>
+    
+</body>
+
+</html>

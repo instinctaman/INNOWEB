@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll-Locked Horizontal Cards</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            overflow-x: hidden;
+        }
+
+        .section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f0f0f0;
+        }
+
+        .horizontal-wrapper {
+            position: relative;
+        }
+
+        .scroll-container {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: #fff;
+            width: 100vw;
+            z-index: 1;
+        }
+
+        .scroll-track {
+            display: flex;
+            transition: transform 0.1s linear;
+            padding: 0 50px;
+        }
+
+        .card {
+            width: 300px;
+            height: 400px;
+            background: white;
+            margin: 0 10px;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            font-size: 2em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .spacer {
+            height: 100vh;
+            background: #eaeaea;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .scroll-container {
+            margin-bottom: 300px;
+            transition: opacity 0.3s ease;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="section">
+        <h1>Scroll down to reveal cards</h1>
+    </div>
+
+    <div class="horizontal-wrapper" id="horizontalWrapper">
+        <!-- This empty spacer lets the horizontal section scroll into view normally -->
+        <div id="topPlaceholder" style="height: 100vh;"></div>
+
+        <!-- This is the locked scrolling part -->
+        <div class="scroll-container" id="scrollContainer">
+            <div class="scroll-track" id="scrollTrack">
+                <div class="card">1</div>
+                <div class="card">2</div>
+                <div class="card">3</div>
+                <div class="card">4</div>
+                <div class="card">5</div>
+                <div class="card">6</div>
+                <div class="card">7</div>
+                <div class="card">8</div>
+                <div class="card">9</div>
+            </div>
+        </div>
+
+        <!-- This empty spacer gives vertical room to scroll through -->
+        <div id="bottomSpacer" style="height: 100vh;"></div>
+    </div>
+
+    <div class="spacer">
+        <h1>All cards revealed!</h1>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const scrollTrack = document.getElementById("scrollTrack");
+            const scrollContainer = document.getElementById("scrollContainer");
+            const wrapper = document.getElementById("horizontalWrapper");
+
+            const cardWidth = 300 + 20;
+            const totalCards = 9;
+            const visibleCards = 3;
+            const scrollDistance = (totalCards - visibleCards) * cardWidth;
+
+            const topOffset = wrapper.offsetTop;
+            const scrollArea = scrollDistance;
+
+            // Set wrapper height to simulate scroll space
+            wrapper.style.height = scrollDistance + 2 * window.innerHeight + "px";
+
+            window.addEventListener("scroll", () => {
+                const scrollY = window.scrollY;
+                const start = topOffset + window.innerHeight;
+                const end = start + scrollArea;
+
+                if (scrollY < start) {
+                    // Before the horizontal scroll section
+                    scrollContainer.style.display = "flex";
+                    scrollContainer.style.position = "relative";
+                    scrollContainer.style.top = "0";
+                    scrollTrack.style.transform = "translateX(0px)";
+                } else if (scrollY >= start && scrollY <= end) {
+                    // During horizontal scroll
+                    scrollContainer.style.display = "flex";
+                    scrollContainer.style.position = "fixed";
+                    scrollContainer.style.top = "0";
+
+                    const offset = scrollY - start;
+                    scrollTrack.style.transform = `translateX(-${offset}px)`;
+                } else {
+                    // After scroll ends — hide the container
+                    scrollContainer.style.position = "absolute";
+                    scrollContainer.style.top = scrollArea + "px";
+                    scrollTrack.style.transform = `translateX(-${scrollDistance}px)`;
+
+                    // Hide it completely (but leave margin)
+                    scrollContainer.style.display = "none";
+                }
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
