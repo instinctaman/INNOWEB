@@ -2,157 +2,99 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Scroll-Locked Horizontal Cards</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swipe</title>
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body,
-        html {
+        body {
             margin: 0;
-            padding: 0;
             font-family: sans-serif;
-            overflow-x: hidden;
-        }
-
-        .section {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #f0f0f0;
-        }
-
-        .horizontal-wrapper {
-            position: relative;
-        }
-
-        .scroll-container {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            background: #fff;
-            width: 100vw;
-            z-index: 1;
-        }
-
-        .scroll-track {
-            display: flex;
-            transition: transform 0.1s linear;
-            padding: 0 50px;
-        }
-
-        .card {
-            width: 300px;
-            height: 400px;
-            background: white;
-            margin: 0 10px;
-            border-radius: 16px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-            font-size: 2em;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-shrink: 0;
         }
 
         .spacer {
             height: 100vh;
             background: #eaeaea;
+        }
+
+        .sidhachlna {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .bandkarna {
+            display: flex;
+            position: sticky;
+            top: 0;
+            /* height: 100vh; */
+            will-change: transform;
+        }
+
+        .card1 {
+            margin: 12px;
+            flex: 0 0 400px;
+            height: 400px;
             display: flex;
             justify-content: center;
             align-items: center;
+            font-size: 3rem;
+            background-color: #f8f9fa;
+            border: 2px solid #ccc;
+            box-sizing: border-box;
         }
 
-        .scroll-container {
-            margin-bottom: 300px;
-            transition: opacity 0.3s ease;
+        .ruk {
+            position: sticky;
+            top: 0;
+            /* background: yellow; */
+            padding: 1rem;
+            z-index: 10;
+        }
+
+        .chalnewala {
+            padding: 1rem;
         }
     </style>
 </head>
 
 <body>
-
-    <div class="section">
-        <h1>Scroll down to reveal cards</h1>
-    </div>
-
-    <div class="horizontal-wrapper" id="horizontalWrapper">
-        <!-- This empty spacer lets the horizontal section scroll into view normally -->
-        <div id="topPlaceholder" style="height: 100vh;"></div>
-
-        <!-- This is the locked scrolling part -->
-        <div class="scroll-container" id="scrollContainer">
-            <div class="scroll-track" id="scrollTrack">
-                <div class="card">1</div>
-                <div class="card">2</div>
-                <div class="card">3</div>
-                <div class="card">4</div>
-                <div class="card">5</div>
-                <div class="card">6</div>
-                <div class="card">7</div>
-                <div class="card">8</div>
-                <div class="card">9</div>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, assumenda eligendi fuga vel reprehenderit corrupti necessitatibus nobis saepe quibusdam officia ipsa quia laborum eius odit voluptatem distinctio, voluptatibus quod sequi repellat debitis culpa voluptas. Distinctio nobis sed quia quo corrupti deleniti? Ipsa odit repellendus maxime. Nam rerum laboriosam dolorem non nostrum quo, eaque quisquam quas assumenda minima, blanditiis fugiat, incidunt hic alias fugit! Iusto, voluptatum dignissimos. Tempore vitae ad molestiae unde sed non cumque laudantium repudiandae perferendis. Nostrum dolorum repellat quis pariatur quidem voluptate facilis perspiciatis temporibus perferendis accusamus unde doloribus hic dignissimos odio, praesentium ex reprehenderit vel debitis repudiandae corporis vero dicta impedit necessitatibus eligendi. Porro illum fuga vitae quas quidem, commodi ex consequatur iure labore qui aliquid aspernatur architecto voluptas cum delectus consequuntur recusandae non sunt id sapiente enim nobis! Optio, hic ratione. Dignissimos doloribus eum, non error esse, aliquam labore omnis ullam pariatur repellendus dolores quae voluptate officiis tempore. Ipsam eius enim porro soluta sapiente et doloremque nam adipisci expedita consectetur, aliquid, nisi modi itaque corporis debitis, aut laboriosam minima quisquam officiis cum eum. Sapiente temporibus cupiditate, earum iste provident pariatur ipsum, alias placeat quis at nemo nesciunt ea inventore! Perspiciatis quaerat atque magnam blanditiis, sint animi ratione explicabo laborum, ab illum incidunt! Corporis ut laborum molestias iste dolores et facilis tempora alias ducimus. Perspiciatis iure consequatur suscipit iusto necessitatibus fugit consequuntur? Perspiciatis iusto ad veritatis sed, obcaecati quasi earum repellendus? Neque aspernatur tempora rem? Placeat doloribus ab exercitationem perspiciatis soluta explicabo temporibus blanditiis non itaque atque sapiente quisquam magnam numquam adipisci recusandae vel assumenda odit quam corporis illo, commodi nulla voluptates. Eaque facilis illo ad? Dicta inventore dolor, alias tenetur in illum eveniet enim quasi, explicabo veritatis quisquam commodi, molestias porro temporibus repudiandae necessitatibus corporis. Consectetur laborum quis facere voluptatum similique? Facilis vel dolor impedit consequatur quasi praesentium eaque repudiandae, exercitationem aut error dolores quam et, inventore consectetur autem eveniet earum accusamus. Quaerat pariatur qui mollitia obcaecati soluta dolorum ratione voluptates officiis! Quia, aliquid mollitia ratione nesciunt labore qui reiciendis amet aperiam quidem assumenda sit provident officiis illo delectus numquam cupiditate. Temporibus repudiandae voluptatem laudantium, consequatur ipsam deleniti culpa id doloremque! Eligendi animi nesciunt dignissimos iste itaque quae quaerat doloremque. Blanditiis aliquid ex laudantium tenetur, iusto modi amet fuga officiis corrupti dolor ratione! Nesciunt accusantium quae officia sint voluptatum? Eum explicabo sequi illo asperiores, dolorem autem. Blanditiis, nostrum. Est consectetur aut ut cumque officia sequi facere dignissimos modi, veniam magni! Totam aliquam iusto temporibus minus, cum voluptatum laborum ipsum, officia ipsam quam expedita quisquam, quas a sunt minima neque molestias similique obcaecati. Repellendus mollitia alias eius, animi quo excepturi sint esse expedita est cumque vitae suscipit asperiores deserunt temporibus, totam aspernatur amet aut, sequi doloribus iste magnam aperiam earum porro veritatis. Tenetur cupiditate, unde ullam odio suscipit at corporis cum excepturi animi. Sapiente vitae, earum eum saepe ullam at asperiores aspernatur illum modi corporis in, fugiat quae voluptatum maiores reprehenderit dolor ducimus error esse tempora nihil deserunt provident est dolorem cum. Dolore, deserunt! Provident similique officia natus deleniti alias aspernatur at fuga accusantium, beatae libero, temporibus dolores in perferendis cumque distinctio veniam eaque? Culpa ex odio eius ipsam eveniet saepe repellat, eum necessitatibus pariatur neque ab officia cum veritatis adipisci ullam voluptate iste velit consequuntur aperiam mollitia sunt eligendi sint. Amet dolorum ex facilis aliquam dolore molestias aperiam, itaque saepe impedit. Aspernatur perspiciatis in eius dolor, voluptates eveniet error porro beatae delectus enim illo suscipit accusantium consequuntur quis aliquid nostrum corrupti harum dignissimos amet ipsa accusamus officia consequatur. Assumenda deleniti hic similique animi iusto, numquam accusantium fuga corporis qui, quidem saepe quam provident modi aperiam eaque nemo iure! Omnis blanditiis, libero temporibus unde sequi facere tempora quasi repellat maiores voluptas reiciendis itaque ad iure aspernatur perferendis cum modi eligendi repudiandae ab officia. Omnis odio, voluptates beatae delectus voluptatibus obcaecati cumque quasi mollitia maxime culpa consequatur modi nobis sit numquam officia! Exercitationem illum laborum id dicta officia sit repudiandae odio. Quod nesciunt aliquid perspiciatis! Hic recusandae consequuntur, asperiores quae quisquam odit beatae amet quia exercitationem quos aliquam! Deserunt delectus quasi aperiam labore, ad sed accusamus odit laboriosam, tempora eius error cum provident sunt nihil repudiandae quae cupiditate facilis amet ullam doloribus eveniet alias eaque fugiat. Accusantium incidunt doloribus dignissimos illo aliquid facere maiores, voluptatem animi aut deleniti optio magni non modi tenetur quasi nihil praesentium veniam voluptatibus amet quos natus quisquam rem quas? Dignissimos, omnis in perferendis ullam, reprehenderit blanditiis cum deserunt sunt, exercitationem nobis veritatis! Doloribus saepe rerum quasi soluta quaerat facilis, consectetur voluptatem commodi amet ea nulla sapiente cum dolores atque illo. Tenetur dolorem recusandae, nam quibusdam aliquam eveniet numquam harum aliquid. Maxime delectus quibusdam numquam fuga excepturi fugit veniam minima, est quae. Assumenda totam accusamus in officiis dolorum, culpa quibusdam sed quae molestias provident odit pariatur iusto explicabo accusantium, placeat distinctio fugit quis quos officia? Aperiam voluptas molestias quia obcaecati, libero dolor, praesentium tempora minus omnis ab vitae explicabo odit illo asperiores ut a mollitia enim voluptates ex possimus quibusdam sapiente nemo? Optio hic aut omnis sequi distinctio temporibus similique, magnam velit praesentium iure atque dolorum quia excepturi totam quibusdam reprehenderit veritatis ex cumque. Placeat, est qui! Vero, officiis voluptatibus dolore, nihil temporibus quos nam, aut adipisci rerum doloribus doloremque laudantium in. Impedit, facilis maiores ullam eligendi minus quibusdam delectus. Illum quibusdam nisi, laboriosam sapiente quia quisquam architecto illo odio a ut excepturi necessitatibus corrupti voluptas expedita ex quam quod? Expedita incidunt impedit error. Inventore excepturi maxime animi nam earum soluta perferendis voluptate nisi ex in fugit quisquam culpa accusantium, odio, sequi commodi aliquam incidunt quaerat dicta accusamus! Nam fugiat neque veritatis, inventore aperiam cupiditate sequi, voluptatem provident molestias esse iste in, quidem obcaecati laboriosam deserunt dolor? Reprehenderit possimus nulla aperiam ipsam aut! Natus porro temporibus excepturi fugiat perspiciatis omnis maiores blanditiis quod voluptatibus eum debitis delectus ex aliquam rerum facilis quis pariatur aut provident autem nostrum, ipsam molestias accusamus fugit nulla. Nesciunt accusamus eos odio veritatis, eius cum dicta ipsam doloribus dolore, quo voluptas dolorem nobis facilis similique nulla commodi sequi quod?
+    <!-- <section class="spacer"></section> -->
+    <div class="ruk">
+        <section class="sidhachlna">
+            <div class="bandkarna">
+                <div class="card1">Card1 1</div>
+                <div class="card1">Card1 2</div>
+                <div class="card1">Card1 3</div>
+                <div class="card1">Card1 4</div>
+                <div class="card1">Card1 5</div>
             </div>
-        </div>
-
-        <!-- This empty spacer gives vertical room to scroll through -->
-        <div id="bottomSpacer" style="height: 100vh;"></div>
+        </section>
     </div>
-
-    <div class="spacer">
-        <h1>All cards revealed!</h1>
+    <div class="chalnewala">
+        <!-- <p>Scrollable content goes here</p> -->
+        <div style="height: 1000px;"></div>
     </div>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime beatae fugiat animi repellendus nisi eius, tempore laborum soluta nesciunt saepe minus nemo quisquam fuga atque unde asperiores doloribus accusantium nobis quae porro repudiandae! Necessitatibus quis molestias fuga exercitationem ad nesciunt reprehenderit soluta provident facere amet accusantium, mollitia debitis asperiores delectus iste quasi. Eaque illum atque eos placeat dolore sapiente deserunt, sit maiores sunt, nemo laborum in esse laudantium voluptatibus qui nisi accusamus? Autem eveniet quod minima laboriosam impedit fuga deserunt reiciendis veritatis iste ullam necessitatibus illo, odio nobis accusamus. Nisi delectus, hic suscipit, nihil aperiam illo ea maxime commodi dolore, tempora eveniet possimus voluptatibus ex? Exercitationem quos deleniti quisquam aperiam a! Sapiente voluptate fuga minus officiis veniam numquam ipsam fugit consequuntur molestiae hic!
+    <!-- <section class="spacer"></section> -->
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const scrollTrack = document.getElementById("scrollTrack");
-            const scrollContainer = document.getElementById("scrollContainer");
-            const wrapper = document.getElementById("horizontalWrapper");
+        const section = document.querySelector(".sidhachlna");
+        const wrapper = section.querySelector(".bandkarna");
+        const card1Count = wrapper.children.length;
+        const scrollLength = card1Count * window.innerWidth;
 
-            const cardWidth = 300 + 20;
-            const totalCards = 9;
-            const visibleCards = 3;
-            const scrollDistance = (totalCards - visibleCards) * cardWidth;
+        // Set height of section to allow scroll space
+        // section.style.height = scrollLength + "px";
 
-            const topOffset = wrapper.offsetTop;
-            const scrollArea = scrollDistance;
+        window.addEventListener("scroll", () => {
+            const scrollTop = window.scrollY;
+            const offsetTop = section.offsetTop;
 
-            // Set wrapper height to simulate scroll space
-            wrapper.style.height = scrollDistance + 2 * window.innerHeight + "px";
-
-            window.addEventListener("scroll", () => {
-                const scrollY = window.scrollY;
-                const start = topOffset + window.innerHeight;
-                const end = start + scrollArea;
-
-                if (scrollY < start) {
-                    // Before the horizontal scroll section
-                    scrollContainer.style.display = "flex";
-                    scrollContainer.style.position = "relative";
-                    scrollContainer.style.top = "0";
-                    scrollTrack.style.transform = "translateX(0px)";
-                } else if (scrollY >= start && scrollY <= end) {
-                    // During horizontal scroll
-                    scrollContainer.style.display = "flex";
-                    scrollContainer.style.position = "fixed";
-                    scrollContainer.style.top = "0";
-
-                    const offset = scrollY - start;
-                    scrollTrack.style.transform = `translateX(-${offset}px)`;
-                } else {
-                    // After scroll ends — hide the container
-                    scrollContainer.style.position = "absolute";
-                    scrollContainer.style.top = scrollArea + "px";
-                    scrollTrack.style.transform = `translateX(-${scrollDistance}px)`;
-
-                    // Hide it completely (but leave margin)
-                    scrollContainer.style.display = "none";
-                }
-            });
+            if (scrollTop >= offsetTop && scrollTop <= offsetTop + scrollLength - window.innerHeight) {
+                const scrollOffset = scrollTop - offsetTop;
+                wrapper.style.transform = `translateX(-${scrollOffset}px)`;
+            }
         });
     </script>
 

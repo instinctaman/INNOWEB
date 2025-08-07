@@ -84,7 +84,8 @@ address {
 
 a {
     background-color: transparent;
-    color: inherit;
+    /* color: inherit; */
+    color: #000;
     text-decoration: none
 }
 
@@ -1361,7 +1362,7 @@ p.small {
 
 .footer {
     align-items: center;
-    background-color: #000;
+    background: linear-gradient(to right, #a6fff3 10%, #00ffdd 80%);
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -1770,8 +1771,8 @@ p.small {
     height: 45px;
     left: 30px;
     max-width: 100%;
-    position: fixed;
-    top: 30px;
+    /* position: fixed; */
+    /* top: 30px; */
     width: calc(100% - 60px)
 }
 
@@ -4385,7 +4386,7 @@ header.sticky-- {
 }
 
 .block-tabModule__content-top h2 strong {
-    color: #fff;
+    color: var(--primary-my2-color);
     cursor: default;
     font-weight: 400;
     transition: color .3s ease-out
@@ -5411,7 +5412,7 @@ header.sticky-- {
 @media screen and (max-width:991px) {
     .f-intro {
         margin: 0 0 40px;
-        padding-top: 40px
+        padding-top: 70px
     }
 }
 
@@ -10258,14 +10259,15 @@ header.sticky-- {
 .app {
     /* background-color:#389BAC; */
     /* background-image: url('backimg.webp'); */
-    /* background-image: url('/backimg2.webp'); */
-    background-color: #000;
+    background-image: url('/assets/images/background/back-bricks.png');
+    /* background-color: #000; */
+    /* background: linear-gradient(92.64deg, #ffffff 0%, #8ff4ff 100%); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     /* height: 100vh; */
-    color: antiquewhite;
+    color: rgb(0, 0, 0);
     font-family: Baikal;
     min-height: 100vh;
     transition: background-color .6s ease-out, color .6s ease-out;

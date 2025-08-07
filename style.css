@@ -2,9 +2,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Courgette&family=Noto+Serif+Vithkuqi:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chonburi&display=swap");
 :root {
-  --primary-my-color: #0717ff; /* You can name it anything */
-  --primary-my2-color: #717aff; /* You can name it anything */
+  --primary-my-color: rgb(247, 105, 2); /* You can name it anything */
+  --primary-my2-color: #ffcf75fb; /* You can name it anything */
 }
+:root .colors-inverted {
+    --c-block-title-color: var(--primary-color3);
+    --c-block-color: var(--secondary-color3);
+}
+.colors-inverted {
+    color: var(--body-text-color-alt);
+    --section-title-color: var(--section-title-color-alt);
+    --btn-link-color: var(--secondary-color1);
+    --btn-secondary-gradient: linear-gradient(92.64deg, #6AFFF6 0%, #00E4FF 100%);
+    --btn-secondary-color: var(--primary-color2);
+}
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* background-color: var(--primary-my2-color); */
+  color: white;
+  padding: 1rem;
+  /* text-align: center; */
+  transition: top 0.3s;
+  z-index: 1000;
+}
+
 .fs-0{
   font-size: xx-large;
 }
