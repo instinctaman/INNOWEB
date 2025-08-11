@@ -366,12 +366,11 @@
             line-height: 1.6;
         }
     </style>
-    <link rel='stylesheet' id='rgpd-css-hdf-css'
-        href='assets/css/tarteaucitron-HDF.css' media='all' />
-    <link rel='stylesheet' id='havas_group-style-css' href='assets/css/style.css'
-        media='all' />
-    <link rel='stylesheet' id='havas_group-style-custom-css' href='assets/css/app.css'
-        media='all' />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel='stylesheet' id='rgpd-css-hdf-css' href='assets/css/tarteaucitron-HDF.css' media='all' />
+    <link rel='stylesheet' id='havas_group-style-css' href='assets/css/style.css' media='all' />
+    <link rel='stylesheet' id='havas_group-style-custom-css' href='assets/css/app.css' media='all' />
     <link rel='stylesheet' id='havas_group-style-slider-css'
         href='../../../cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css' media='all' />
     <link rel='stylesheet' id='tablepress-default-css'
@@ -421,6 +420,11 @@
         }
     </style>
     <meta name="generator" content="WP Rocket 3.17.3.1" data-wpr-features="wpr_automatic_lazy_rendering" />
+    <style>
+        .f-accordeon_list {
+            flex-direction: row;
+        }
+    </style>
 </head>
 
 <body class="page-template-default page page-id-14599 page-child parent-pageid-14596 black-theme ">
@@ -432,8 +436,7 @@
             <header class="header" role="banner">
                 <a href="../../index.html" class="logo-header__ctn" title="Back to Havas' home page">
                     <span class="sr-only">Home</span>
-                    <img class="logo-header" src="../../havas-content/themes/havas-group/dist/assets/images/logo.svg"
-                        alt="havas" />
+                    <img class="logo-header" src="assets/images/Inno_logo.png" alt="havas" />
                 </a>
                 <div class="header__right">
                     <div class="header__right-links">
@@ -460,129 +463,103 @@
                             <ul class="sub-menu">
                                 <li id="menu-item-2363"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2363 js-elt">
-                                    <a href="../../who-we-are/our-mission/index.html">Our mission</a></li>
+                                    <a href="../../who-we-are/our-mission/index.html">About Us</a>
+                                </li>
                                 <li id="menu-item-9469"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9469 js-elt">
-                                    <a href="../../who-we-are/our-strategy/index.html">Our strategy</a></li>
+                                    <a href="../../who-we-are/our-strategy/index.html">FAQ</a>
+                                </li>
                                 <li id="menu-item-10018"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10018 js-elt">
-                                    <a href="../../who-we-are/governance/index.html">Governance</a></li>
-                                <li id="menu-item-9470"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9470 js-elt">
-                                    <a href="../../who-we-are/our-villages/index.html">Our Villages</a></li>
-                                <li id="menu-item-9472"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9472 js-elt">
-                                    <a href="../../who-we-are/our-careers/index.html">Our careers</a></li>
+                                    <a href="../../who-we-are/governance/index.html">Location</a>
+                                </li>
                             </ul>
                         </li>
                         <li id="menu-item-2367"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2367 js-elt">
-                            <a href="../../what-we-do/index.html">What we do</a>
+                            <a href="../../what-we-do/index.html">Services</a>
                             <ul class="sub-menu">
                                 <li id="menu-item-9729"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9729 js-elt">
-                                    <a href="../../what-we-do/index.html">Our services</a></li>
+                                    <a href="../../what-we-do/index.html">Web Development</a>
+                                </li>
                                 <li id="menu-item-9585"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9585 js-elt">
-                                    <a href="../../find-us/indexa083.html?service=business-consultancy-transformation">Business
-                                        Consultancy &#038; Transformation</a></li>
+                                    <a href="../../find-us/indexa083.html?service=business-consultancy-transformation">Digital
+                                        Marketing </a>
+                                </li>
                                 <li id="menu-item-9586"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9586 js-elt">
-                                    <a href="../../find-us/indexec44.html?service=brand-consultancy-design">Brand
-                                        Consultancy &#038; Design</a></li>
+                                    <a href="../../find-us/indexec44.html?service=brand-consultancy-design">Web
+                                        Applications </a>
+                                </li>
                                 <li id="menu-item-9587"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9587 js-elt">
-                                    <a href="../../find-us/indexac96.html?service=creative">Creative</a></li>
+                                    <a href="../../find-us/indexac96.html?service=creative">Mobile Applications </a>
+                                </li>
                                 <li id="menu-item-9588"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9588 js-elt">
-                                    <a href="../../find-us/index71de.html?service=media">Media</a></li>
+                                    <a href="../../find-us/index71de.html?service=media">Ecommerce Solutions </a>
+                                </li>
                                 <li id="menu-item-9589"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9589 js-elt">
-                                    <a href="../../find-us/index0261.html?service=health-wellness">Health &#038;
-                                        Wellness</a></li>
+                                    <a href="../../find-us/index0261.html?service=health-wellness">Graphic Design </a>
+                                </li>
                                 <li id="menu-item-9590"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9590 js-elt">
-                                    <a href="../../find-us/indexa47a.html?service=customer-experience">Customer
-                                        Experience</a></li>
-                                <li id="menu-item-9593"
-                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9593 js-elt">
-                                    <a
-                                        href="../../find-us/index966b.html?service=pr-public-affairs-corporate-communications">PR,
-                                        Public Affairs &#038; Corporate Communications</a></li>
-                                <li id="menu-item-9591"
-                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9591 js-elt">
-                                    <a href="../../find-us/indexe02c.html?service=brand-partnership-sponsorship-events">Brand
-                                        partnership, Sponsorship &#038; Events</a></li>
-                                <li id="menu-item-9592"
-                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9592 js-elt">
-                                    <a href="../../find-us/index2854.html?service=production-content-at-scale">Production
-                                        &#038; Content at Scale</a></li>
+                                    <a href="../../find-us/indexa47a.html?service=customer-experience">Training &
+                                        Certification</a>
+                                </li>
                             </ul>
                         </li>
                         <li id="menu-item-14709"
                             class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-14709 js-elt">
-                            <a href="../index.html">Investor relations &#038; shareholders</a>
+                            <a href="../index.html">Solution</a>
                             <ul class="sub-menu">
                                 <li id="menu-item-14708"
                                     class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-14599 current_page_item menu-item-14708 js-elt">
-                                    <a href="index.html" aria-current="page">Company &#038; Havas share information</a>
+                                    <a href="index.html" aria-current="page">Generative AI</a>
                                 </li>
                                 <li id="menu-item-15101"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15101 js-elt">
-                                    <a href="../financial-press-releases-presentations/index.html">Financial press
-                                        releases &#038; presentations</a></li>
+                                    <a href="../financial-press-releases-presentations/index.html">Experience
+                                        Transformation</a>
+                                </li>
                                 <li id="menu-item-15100"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15100 js-elt">
-                                    <a href="../regulated-information/index.html">Regulated information</a></li>
+                                    <a href="../regulated-information/index.html">Customer Engagement</a>
+                                </li>
                                 <li id="menu-item-14757"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14757 js-elt">
-                                    <a href="../admission-documents/index.html">Admission documents</a></li>
+                                    <a href="../admission-documents/index.html">Digital Commerce</a>
+                                </li>
                                 <li id="menu-item-15673"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15673 js-elt">
-                                    <a href="../2025-annual-general-meeting/index.html">2025 Annual General Meeting</a>
+                                    <a href="../2025-annual-general-meeting/index.html">Digital Engineering</a>
                                 </li>
                                 <li id="menu-item-15046"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15046 js-elt">
-                                    <a href="../individual-shareholders/index.html">Individual shareholders</a></li>
+                                    <a href="../individual-shareholders/index.html">Modernizing Tech Infrastructure </a>
+                                </li>
                                 <li id="menu-item-14707"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14707 js-elt">
-                                    <a href="../financial-and-ir-calendar-contact/index.html">Financial and IR calendar
-                                        &#038; contact</a></li>
+                                    <a href="../financial-and-ir-calendar-contact/index.html">Management Services</a>
+                                </li>
                                 <li id="menu-item-15058"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15058 js-elt">
-                                    <a href="../analyst-coverage/index.html">Analyst coverage</a></li>
-                                <li id="menu-item-13618"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13618 js-elt">
-                                    <a href="../archives/index.html">Archives</a></li>
+                                    <a href="../analyst-coverage/index.html">Innovation</a>
+                                </li>
                             </ul>
                         </li>
                         <li id="menu-item-10175"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10175 js-elt"><a
-                                href="../../work/index.html">Creative work</a></li>
+                                href="../../work/index.html">Blog</a></li>
                         <li id="menu-item-12054"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12054 js-elt"><a
-                                href="../../life-at-havas/index.html">Life at Havas</a></li>
-                        <li id="menu-item-9684"
-                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-9684 js-elt">
-                            <a target="_blank" href="../../sustainability/index.html">Sustainability</a>
-                            <ul class="sub-menu">
-                                <li id="menu-item-11505"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11505 js-elt">
-                                    <a href="../../sustainability/index.html">Impact+</a></li>
-                                <li id="menu-item-11503"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11503 js-elt">
-                                    <a href="../../sustainability/our-pillars/index.html">Our pillars</a></li>
-                                <li id="menu-item-11504"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11504 js-elt">
-                                    <a href="../../sustainability/havas-in-action/index.html">Havas in action</a></li>
-                                <li id="menu-item-11502"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11502 js-elt">
-                                    <a href="../../sustainability/documentation/index.html">Documentation</a></li>
-                            </ul>
-                        </li>
+                                href="../../life-at-havas/index.html">Clients</a></li>
                         <li id="menu-item-10124"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10124 js-elt"><a
-                                href="../../press/index.html">Press</a></li>
+                                href="../../press/index.html">Contact Us</a></li>
                     </ul>
                 </div>
 
@@ -609,12 +586,11 @@
                 <div class="container-max">
                     <div data-theme-color="black-theme" class="f-intro js-slide-in">
                         <div class="small-wrapper f-intro_content">
-                            <h1 data-vitesse="0.6" class="f-intro_title h1 js-title-element full"><span>Company & Havas
-                                    share information </span></h1>
+                            <h1 data-vitesse="0.6" class="f-intro_title h1 js-title-element full"><span>Management Services</span></h1>
                         </div>
 
                         <div class="f-intro_img ">
-                            <img class="js-clipped-img" src="../../havas-content/uploads/2024/10/fond_2.png" alt="">
+                            <img class="js-clipped-img" src="assets/images/Offering/Gen_AI_2.jpg" alt="">
                         </div>
                     </div>
 
@@ -623,184 +599,90 @@
             <div class="wrapper">
                 <div class="container white--">
                     <div class="container-max">
-
-                        <div data-theme-color="black-theme" class="f-tableSimple small-wrapper">
-                            <div class="f-title">
-                                <div class="js-text-element">
-                                    <div class="js-span">
-                                        <h2 class="h3 grey--">Company information</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="f-tableSimple__container">
-                                <table class="f-tableSimple__content">
-                                    <tr class="f-tableSimple__line">
-                                        <td class="f-tableSimple__col"><strong>Company name</strong></td>
-                                        <td class="f-tableSimple__col"><strong>Havas N.V.</strong></td>
-                                    </tr>
-                                    <tr class="f-tableSimple__line">
-                                        <td class="f-tableSimple__col">ISIN code</td>
-                                        <td class="f-tableSimple__col">NL0015002AH0</td>
-                                    </tr>
-                                    <tr class="f-tableSimple__line">
-                                        <td class="f-tableSimple__col">Bloomberg ticker</td>
-                                        <td class="f-tableSimple__col">HAVAS NA</td>
-                                    </tr>
-                                    <tr class="f-tableSimple__line">
-                                        <td class="f-tableSimple__col">Sedol code</td>
-                                        <td class="f-tableSimple__col">BT6MF41</td>
-                                    </tr>
-                                    <tr class="f-tableSimple__line">
-                                        <td class="f-tableSimple__col">MIC code</td>
-                                        <td class="f-tableSimple__col">XAMS</td>
-                                    </tr>
-                                    <tr class="f-tableSimple__line">
-                                        <td class="f-tableSimple__col">Dutch trade register number</td>
-                                        <td class="f-tableSimple__col">95011439</td>
-                                    </tr>
-                                    <tr class="f-tableSimple__line">
-                                        <td class="f-tableSimple__col">Address</td>
-                                        <td class="f-tableSimple__col">29/30 quai de Dion Bouton, 92800 Puteaux, France
-                                        </td>
-                                    </tr>
-                                    <tr class="f-tableSimple__line">
-                                        <td class="f-tableSimple__col">Registered office
-                                        </td>
-                                        <td class="f-tableSimple__col">Amsterdam</td>
-                                    </tr>
-                                    <tr class="f-tableSimple__line">
-                                        <td class="f-tableSimple__col">Stock market</td>
-                                        <td class="f-tableSimple__col">Euronext Amsterdam</td>
-                                    </tr>
-                                    <tr class="f-tableSimple__line">
-                                        <td class="f-tableSimple__col">Number of shares composed the share capital (as
-                                            of 16 december 2024)</td>
-                                        <td class="f-tableSimple__col">991,811,494</td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
                         <div data-theme-color="black-theme" class="m-portrait small-wrapper js-slide-in">
                             <div class="m-wysiwyg c-wysiwyg">
                                 <div class="m-wysiwyg_content js-text-element">
-                                    <h3><span style="color: #9a9a9a;">Havas share price</span></h3>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div data-theme-color="black-theme" class="f-bourse js-slide-in">
-                            <div class="c-loader" data-cursor-hover><span></span><span></span><span></span></div>
-                            <div class="f-bourse__ctn">
-                                <div class="f-bourse__intro">
-                                    <ul>
-                                        <li>AEX -0.02% <span class="f-bourse__icon negatif--"></span></li>
-                                        <li>AMX -0.02% <span class="f-bourse__icon negatif--"></span></li>
-                                    </ul>
-                                </div>
-                                <div class="f-bourse__content">
-                                    <div class="f-bourse__global">
-
+                                    <!-- <h4>Unsponsored ADRs</h4> -->
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <img src="assets/images/Offering/Gen_AI_1.jpg" alt="">
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <p>&nbsp;</p>
+                                                <p>At Innoweb Solution, we are passionate about helping your brand
+                                                    thrive in the digital age. Our Generative AI Solutions are here to
+                                                    unlock new opportunities, streamline operations and enhance customer
+                                                    experiences like never before. Let us help you leverage the power of
+                                                    AI to create innovative, scalable and impactful solutions that drive
+                                                    your business forward.</p>
+                                                <p style="margin-top: 12px;">With Generative AI, we help you offer
+                                                    hyper-personalized customer experiences. Our AI-driven solutions
+                                                    analyze customer behavior, preferences and interactions to generate
+                                                    tailored recommendations, content and offers.
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="f-bourse__details">
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div data-theme-color="black-theme" class="m-portrait small-wrapper js-slide-in">
-                            <div class="m-wysiwyg c-wysiwyg">
-                                <div class="m-wysiwyg_content js-text-element">
-                                    <h4>Unsponsored ADRs</h4>
-                                    <p>&nbsp;</p>
-                                    <p>Havas does not sponsor an American Depositary Receipt (ADR) facility in respect
-                                        of its shares. Any ADR facility currently in existence is “unsponsored” and has
-                                        no ties whatsoever to Havas. Havas disclaims any liability in respect of such
-                                        facility.</p>
                                 </div>
                             </div>
 
                         </div>
                         <div data-theme-color="black-theme" class="f-accordeon small-wrapper">
-                            <ul class="f-accordeon_list">
-                                <li class="f-accordeon_item">
+                            <ul class="f-accordeon_list row">
+                                <li class="f-accordeon_item col-lg-6 col-md-6 col-sm-6">
                                     <h5 class="f-accordeon_item-title h5">
                                         <button aria-expanded="false" aria-controls="accordion-1">
-                                            <span></span>Articles of association </button>
+                                            <span></span>E-commerce</button>
                                     </h5>
                                     <div class="f-accordeon_item-text" id="accordion-1">
                                         <p>
-                                        <p><a class="btn-download"
-                                                href="../../havas-content/uploads/2024/12/articles-of-association-havas-n.v.pdf"
-                                                target="_blank" rel="noopener">Download PDF</a></p>
-                                        </p>
+                                        <p>Personalized shopping experiences, automate product recommendations and
+                                            generate dynamic content for marketing.</p>
                                     </div>
                                 </li>
-                                <li class="f-accordeon_item">
+                                <li class="f-accordeon_item col-lg-6 col-md-6 col-sm-6">
                                     <h5 class="f-accordeon_item-title h5">
                                         <button aria-expanded="false" aria-controls="accordion-2">
-                                            <span></span>Board regulations </button>
+                                            <span></span>Healthcare</button>
                                     </h5>
                                     <div class="f-accordeon_item-text" id="accordion-2">
                                         <p>
-                                        <p><a class="btn-download"
-                                                href="../../havas-content/uploads/2024/12/board-regulations-havas-n.v.pdf"
-                                                target="_blank" rel="noopener">Download PDF</a></p>
-                                        </p>
+                                        <p>Automate medical record processing, generate patient reports and create
+                                            AI-powered diagnostic tools.</p>
                                     </div>
                                 </li>
-                                <li class="f-accordeon_item">
+                                <li class="f-accordeon_item col-lg-6 col-md-6 col-sm-6">
                                     <h5 class="f-accordeon_item-title h5">
                                         <button aria-expanded="false" aria-controls="accordion-3">
-                                            <span></span>Audit & sustainability Committee charter </button>
+                                            <span></span>Marketing and Advertising</button>
                                     </h5>
                                     <div class="f-accordeon_item-text" id="accordion-3">
                                         <p>
-                                        <p><a class="btn-download"
-                                                href="../../havas-content/uploads/2024/12/audit-and-sustainability-committee-charter-havas-n.v.pdf"
-                                                target="_blank" rel="noopener">Download PDF</a></p>
-                                        </p>
+                                        <p>Develop creative content, automate ad copywriting and personalize campaigns
+                                            at scale.</p>
                                     </div>
                                 </li>
-                                <li class="f-accordeon_item">
+                                <li class="f-accordeon_item col-lg-6 col-md-6 col-sm-6">
                                     <h5 class="f-accordeon_item-title h5">
                                         <button aria-expanded="false" aria-controls="accordion-4">
-                                            <span></span>Corporate governance, nominations and remuneration Committee
-                                            charter </button>
+                                            <span></span>Finance</button>
                                     </h5>
                                     <div class="f-accordeon_item-text" id="accordion-4">
                                         <p>
-                                        <p><a class="btn-download"
-                                                href="../../havas-content/uploads/2024/12/corporate-governance-nominations-and-remuneration-committee-charter-havas-n.v.pdf"
-                                                target="_blank" rel="noopener">Download PDF</a></p>
-                                        </p>
+                                        <p>Enhance data analysis, generate reports and automate client communication for
+                                            financial institutions.</p>
                                     </div>
                                 </li>
-                                <li class="f-accordeon_item">
+                                <li class="f-accordeon_item col-lg-6 col-md-6 col-sm-6">
                                     <h5 class="f-accordeon_item-title h5">
                                         <button aria-expanded="false" aria-controls="accordion-5">
-                                            <span></span>Terms & Conditions Special Voting Shares </button>
+                                            <span></span>Entertainment and Media</button>
                                     </h5>
                                     <div class="f-accordeon_item-text" id="accordion-5">
                                         <p>
-                                        <p><a class="btn-download"
-                                                href="../../havas-content/uploads/2025/04/svs-terms-_-conditions-sanglier56193707.1.pdf"
-                                                target="_blank" rel="noopener">Download PDF</a></p>
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="f-accordeon_item">
-                                    <h5 class="f-accordeon_item-title h5">
-                                        <button aria-expanded="false" aria-controls="accordion-6">
-                                            <span></span>Form 8937 – Report of organizational actions affecting basis of
-                                            securities (Havas shares) </button>
-                                    </h5>
-                                    <div class="f-accordeon_item-text" id="accordion-6">
-                                        <p>
-                                        <p><a class="btn-download"
-                                                href="../../havas-content/uploads/2025/01/26122024_155324.pdf"
-                                                target="_blank" rel="noopener">Download PDF</a></p>
-                                        </p>
+                                        <p>Generate scripts, create engaging content and automate video editing for a
+                                            range of digital media platforms.</p>
                                     </div>
                                 </li>
                             </ul>
@@ -808,71 +690,20 @@
                         <div class="black-theme">
                             <hr>
                         </div>
-                        <div data-theme-color="black-theme" class="m-portrait small-wrapper js-slide-in">
-                            <div class="m-wysiwyg c-wysiwyg">
-                                <div class="m-wysiwyg_content js-text-element">
-                                    <p>&nbsp;</p>
-                                    <p>&nbsp;</p>
-                                    <p>&nbsp;</p>
-                                    <h3><span style="color: #9a9a9a;">Contact us</span></h3>
-                                </div>
-                            </div>
 
-                        </div>
-                        <div class="f-visuelFull small-wrapper js-data-rise">
-                            <div class="f-visuelFull__item">
-                                <img src="../../havas-content/uploads/2024/10/1.png" alt="" />
-                                <p> </p>
-                            </div>
-                        </div>
-                        <div class="f-wysiwyg c-wysiwyg small-wrapper black-theme js-slide-in">
-                            <div class="f-wysiwyg_content js-text-element">
-                                <h4><span style="color: #e60000;">François Laroze</span></h4>
-                                <p>CFO and COO, Havas</p>
-                                <p><strong><a
-                                            href="mailto:investor-relations@havas.com">investor-relations@havas.com</a></strong>
-                                </p>
-                            </div>
-                            <div class="f-wysiwyg_content js-text-element">
-                                <h4><span style="color: #e60000;">Delphine Maillet</span></h4>
-                                <p>Head of Investor Relations, Havas</p>
-                                <p><strong><a
-                                            href="mailto:investor-relations@havas.com">investor-relations@havas.com</a></strong>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="f-visuelFull small-wrapper js-data-rise">
-                            <div class="f-visuelFull__item">
-                                <img src="../../havas-content/uploads/2024/10/2.png" alt="" />
-                                <p> </p>
-                            </div>
-                        </div>
-                        <div class="f-wysiwyg c-wysiwyg small-wrapper black-theme js-slide-in">
-                            <div class="f-wysiwyg_content js-text-element">
-                                <h4><span style="color: #e60000;">Charlotte Rambaud</span></h4>
-                                <p>Chief Communications Officer, Havas</p>
-                                <p><strong><a href="mailto:press@havas.com">press@havas.com</a></strong></p>
-                            </div>
-                            <div class="f-wysiwyg_content js-text-element">
-                                <h4><span style="color: #e60000;">Kristin Calmes</span></h4>
-                                <p>Senior Communications Officer, Havas</p>
-                                <p><strong><a href="mailto:press@havas.com">press@havas.com</a></strong></p>
-                            </div>
-                        </div>
+
                         <div class="black-theme">
                             <hr>
                         </div>
                         <div class="f-wysiwyg c-wysiwyg small-wrapper black-theme js-slide-in">
                             <div class="f-wysiwyg_content js-text-element">
                                 <p><a class="btn red" href="../../who-we-are/our-mission/index.html"><span
-                                            class="emptyClass">Our mission</span><span class="btn-arrow"> </span></a>
+                                            class="emptyClass">Contact Us</span><span class="btn-arrow"> </span></a>
                                 </p>
                             </div>
                             <div class="f-wysiwyg_content js-text-element">
-                                <h6>Founded in 1835 by Charles-Louis Havas, Havas is one of the world’s largest global
-                                    communications groups, with more than 23,000 people in over 100 countries sharing
-                                    one single mission: to make a meaningful difference to brands, businesses, and
-                                    people.</h6>
+                                <!-- <h6>Overall, Innoweb Solutions aims to help businesses maximize their online sales
+                                    potential and stay competitive in the ever-evolving e-commerce landscape.</h6> -->
                             </div>
                         </div>
                     </div>
@@ -915,63 +746,62 @@
             </div>
 
         </main>
-        <footer data-wpr-lazyrender="1" class="footer">
+        <footer data-wpr-lazyrender="1" class="footer" id="downid">
             <div class="footer__line">
                 <ul class="footer__list">
-                    <li><a href="../../who-we-are/villages/index.html" target="_self" title="Havas Villages">Havas
-                            Villages</a></li>
-                    <li><a href="../../dare/index.html" target="_self" title="Dare! Magazine">Dare! Magazine</a></li>
+                    <li><a href="who-we-are/villages/index.html" target="_self" title="Havas Villages">Home</a></li>
+                    <li><a href="dare/index.html" target="_self" title="Dare! Magazine">About Us</a></li>
 
-                    <li><a href="../../press_release/meaningful-brands-2019-press-release/index.html" target="_self"
+                    <li><a href="press_release/meaningful-brands-2019-press-release/index.html" target="_self"
                             title="Meaningful Brands">Meaningful Brands</a></li>
-                    <li><a href="../../prosumer-reports/index.html" target="_self" title="Prosumer Reports">Prosumer
-                            Reports</a></li>
+                    <li><a href="prosumer-reports/index.html" target="_self" title="Prosumer Reports">Services</a></li>
                 </ul>
                 <ul class="footer__list rs--">
                     <li><a href="https://fr.linkedin.com/company/havasgroup" target="_blank" class="small--"
                             rel="external nofollow" title="Havas on LinkedIn"><i aria-hidden="true"
-                                class="icon-linkedin"></i><span class="sr-only">Havas on LinkedIn</span></a></li>
-                    <li><a href="https://www.facebook.com/HavasGroup" target="_blank" rel="external nofollow"
-                            title="Havas on Facebook"><i aria-hidden="true" class="icon-facebook"></i><span
-                                class="sr-only">Havas on Facebook</span></a></li>
-                    <li><a href="https://twitter.com/HavasGroup" target="_blank" class="small--" rel="external nofollow"
-                            title="Havas on Twitter"><i aria-hidden="true" class="icon-twitter"></i><span
-                                class="sr-only">Havas on Twitter</span></a></li>
-                    <li><a href="https://www.instagram.com/havasgroup/" target="_blank" rel="external nofollow"
-                            title="Havas on Instagram"><i aria-hidden="true" class="icon-instagram"></i><span
-                                class="sr-only">Havas on Instagram</span></a></li>
+                                class="icon-linkedin"></i><span class="sr-only">Innoweb on LinkedIn</span></a></li>
+                    <li><a href="https://www.facebook.com/InnowebGroup" target="_blank" rel="external nofollow"
+                            title="Innoweb on Facebook"><i aria-hidden="true" class="icon-facebook"></i><span
+                                class="sr-only">Innoweb on Facebook</span></a></li>
+                    <li><a href="https://twitter.com/InnowebGroup" target="_blank" class="small--"
+                            rel="external nofollow" title="Innoweb on Twitter"><i aria-hidden="true"
+                                class="icon-twitter"></i><span class="sr-only">Innoweb on Twitter</span></a></li>
+                    <li><a href="https://www.instagram.com/Innowebgroup/" target="_blank" rel="external nofollow"
+                            title="Innoweb on Instagram"><i aria-hidden="true" class="icon-instagram"></i><span
+                                class="sr-only">Innoweb on Instagram</span></a></li>
                 </ul>
             </div>
             <div class="footer__line" role="contentinfo">
                 <ul id="menu-footer-menu" class="footer__list">
                     <li id="menu-item-2719"
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2719"><a
-                            href="../../legal-notices/index.html">Legal Notices</a></li>
+                            href="legal-notices/index.html">Clients</a></li>
                     <li id="menu-item-8858"
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8858"><a
-                            href="../../general-terms-and-conditions-of-use/index.html">General Terms and Conditions of
+                            href="general-terms-and-conditions-of-use/index.html">General Terms and Conditions of
                             Use</a></li>
                     <li id="menu-item-2717"
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2717"><a
-                            href="../../data-protection-policy/index.html">Data Protection Policy</a></li>
+                            href="data-protection-policy/index.html">Data Protection Policy</a></li>
                     <li id="menu-item-10373"
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10373"><a
-                            href="../../havas-n-a-privacy-notice/index.html">Havas N.A. Privacy Notice</a></li>
+                            href="havas-n-a-privacy-notice/index.html">Privacy Notice</a></li>
                     <li id="menu-item-2718"
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2718"><a
-                            href="../../cookie-policy/index.html">Cookie Policy</a></li>
-                    <li id="menu-item-157"
-                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-157"><a
-                            href="../../index.html#rgpd">Cookie settings</a></li>
-                    <li id="menu-item-15890"
+                            href="cookie-policy/index.html">Contact Us</a></li>
+                    <!-- <li id="menu-item-157"
+                        class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-157">
+                        <a href="index.html#rgpd" aria-current="page">Cookie settings</a>
+                    </li> -->
+                    <!-- <li id="menu-item-15890"
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15890"><a
-                            href="../../sitemap/index.html">Sitemap</a></li>
+                            href="sitemap/index.html">Sitemap</a></li>
                     <li id="menu-item-15936"
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15936"><a
-                            href="../../accessibilite/index.html">Accessibility</a></li>
+                            href="accessibilite/index.html">Accessibility</a></li> -->
                 </ul>
                 <div class="footer__list">
-                    <span>© 2023 Havas</span>
+                    <span>© 2024 Innoweb Solution</span>
                 </div>
             </div>
         </footer>

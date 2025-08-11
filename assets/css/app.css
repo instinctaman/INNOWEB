@@ -1,5 +1,8 @@
 @charset "UTF-8";
-
+:root {
+  --primary-my-color: rgb(247, 105, 2); /* You can name it anything */
+  --primary-my2-color: #ffcf75fb; /* You can name it anything */
+}
 /*! de-style.css v1.0.5 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 * {
     box-sizing: border-box
@@ -2555,9 +2558,9 @@ header.sticky-- {
 
 .c-wysiwyg p {
     font-family: Baikal;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 300;
-    line-height: 22px
+    line-height: 30px;
 }
 
 .c-wysiwyg strong {
