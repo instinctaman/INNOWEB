@@ -1,8 +1,12 @@
 @charset "UTF-8";
+
 :root {
-  --primary-my-color: rgb(247, 105, 2); /* You can name it anything */
-  --primary-my2-color: #ffcf75fb; /* You can name it anything */
+    --primary-my-color: rgb(247, 105, 2);
+    /* You can name it anything */
+    --primary-my2-color: #ffcf75fb;
+    /* You can name it anything */
 }
+
 /*! de-style.css v1.0.5 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 * {
     box-sizing: border-box
@@ -503,7 +507,7 @@ svg {
 }
 
 .btn.red {
-    background-color:var(--primary-my-color);
+    background-color: var(--primary-my-color);
 }
 
 .btn-arrow {
@@ -1462,7 +1466,7 @@ p.small {
 }
 
 .footer__line:first-child .footer__list.rs-- a:before {
-    background: #000;
+    background: var(--primary-my-color);
     bottom: -2px;
     content: "";
     display: block;
@@ -2039,7 +2043,7 @@ header.sticky-- {
 }
 
 .c-menu__list>li.menu-item-has-children>a:after {
-    content: "\e90b";
+    /* content: "\e90b"; */
     display: inline-block;
     font-size: 15px;
     margin-left: 16px;
@@ -2163,7 +2167,7 @@ header.sticky-- {
 
 @media screen and (min-width:992px) {
     .c-menu__list.hasHover-->li:not(.hover--) a {
-        color: #999;
+        color: #3a3a3a;
         opacity: .5
     }
 }
@@ -5407,10 +5411,10 @@ header.sticky-- {
     line-height: 26px
 }
 
-.f-intro {
+/* .f-intro {
     margin: 0 0 140px;
     padding-top: 140px
-}
+} */
 
 @media screen and (max-width:991px) {
     .f-intro {
@@ -5423,7 +5427,7 @@ header.sticky-- {
     align-items: flex-start;
     display: flex;
     gap: 64px;
-    margin-bottom: 60px;
+    /* margin-bottom: 60px; */
     position: relative;
     z-index: 2
 }
@@ -5464,6 +5468,7 @@ header.sticky-- {
 }
 
 .f-intro_title.full {
+    margin-bottom: 2em;
     width: 100%
 }
 
@@ -5474,7 +5479,7 @@ header.sticky-- {
 }
 
 .f-intro_text {
-    color: #999;
+    color: #5a5a5a;
     font-size: 24px;
     line-height: 32px;
     margin-left: -32px;
@@ -6326,8 +6331,8 @@ header.sticky-- {
 
 .f-title {
     font-family: Baikal-expanded;
-    margin-bottom: 60px;
-    margin-top: 60px
+    /* margin-bottom: 60px;
+    margin-top: 60px */
 }
 
 @media screen and (max-width:991px) {
@@ -7091,9 +7096,9 @@ header.sticky-- {
     border-left: 2px solid #000
 }
 
-.f-tableComplex {
+/* .f-tableComplex {
     margin: 140px auto
-}
+} */
 
 @media screen and (max-width:991px) {
     .f-tableComplex {
@@ -7165,7 +7170,7 @@ header.sticky-- {
 
 .f-tableComplex__col:first-of-type {
     border-left: 2px solid #999;
-    width: 30%
+    width: 100%
 }
 
 .f-tableComplex__col.nopadding-- {
@@ -7205,15 +7210,15 @@ header.sticky-- {
 }
 
 .f-tableComplex__sscol {
-    font-size: 18px;
+    font-size: 16px;
     padding: 10px 5px;
     width: 67%
 }
 
 .f-tableComplex__sscol:first-of-type {
-    font-size: 24px;
-    text-align: center;
-    width: 33%
+    font-size: 16px;
+    /* text-align: center; */
+    width: 50%
 }
 
 .f-tableComplex ul {
@@ -9298,7 +9303,7 @@ header.sticky-- {
 
 .c-trombi__item {
     margin-bottom: 100px;
-    min-height: 420px;
+    /* min-height: 420px; */
     width: calc(25% - 24px)
 }
 
@@ -9320,13 +9325,15 @@ header.sticky-- {
 }
 
 .c-trombi__item-img {
+    display: flex;
+    justify-content: center;
     margin-bottom: 24px
 }
 
 .c-trombi__item-img img {
     filter: grayscale(100%);
     transition: all .3s cubic-bezier(.13, 0, .11, 1);
-    width: 100%
+    width: 200px;
 }
 
 .c-trombi__item-img img:hover {
@@ -9954,9 +9961,9 @@ header.sticky-- {
     }
 }
 
-.c-pressrelease__intro {
+/* .c-pressrelease__intro {
     margin-top: 140px
-}
+} */
 
 @media screen and (max-width:991px) {
     .c-pressrelease__intro {
@@ -10073,15 +10080,21 @@ header.sticky-- {
         padding-top: 20px;
         position: sticky;
         right: 0;
-        top: 0
+        top: 0;
+        z-index: 1;
+        /* Ensure it stays under modal & backdrop */
     }
+}
+
+.modal-backdrop {
+    z-index: 0;
 }
 
 @media screen and (max-width:991px) {
     .c-pressrelease__right {
-        align-items: flex-start;
+        /* align-items: flex-start;
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: row-reverse; */
         flex-wrap: nowrap;
         justify-content: space-between;
         margin-bottom: 60px
@@ -10309,8 +10322,14 @@ header.sticky-- {
 .app .container.nopadding-- {
     padding: 0
 }
+.row div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 .app .container .small-wrapper {
+    margin-top: 120px;
     margin-left: 118px;
     margin-right: 118px
 }
