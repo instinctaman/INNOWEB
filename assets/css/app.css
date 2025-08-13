@@ -3981,14 +3981,24 @@ header.sticky-- {
 }
 
 .block-hero__content .hero-logo {
+    font-size: large;
+    text-align: center;
     max-height: 120px;
-    width: 50%
+    width: 81%;
+    margin-bottom: 30px;
 }
 
 .block-hero__content .hero-logo svg {
     max-height: 120px
 }
-
+.block-ourWork__list{
+    height: 500px;
+}
+ @media screen and (max-width:992px) {
+    .block-ourWork__list{
+    height: 100%;
+}
+ }
 @media screen and (max-width:991px) {
     .block-hero__content .hero-logo {
         max-height: auto;

@@ -431,6 +431,10 @@
             }
 
         }
+
+        .popular-course {
+            margin-bottom: 90px;
+        }
     </style>
 </head>
 
@@ -606,7 +610,7 @@
                     <span class="block-hero__line" id="upperid"></span>
                     <div class="block-hero__content">
                         <h1 data-animation-path="https://www.havas.com/havas-content/themes/havas-group/dist/assets/images/logo_red-animated.json"
-                            class="hero-logo"></h1>
+                            class="hero-logo">Empower your Success Journey by Engaging and Connecting</h1>
                         <h2 data-delay="1" class="hero-title title-animated"> </h2>
                     </div>
                     <div class="block-hero__video">
@@ -621,19 +625,19 @@
                             </div>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="assets/images/slider/AI.jpg" class="d-block w-100" alt="..."
+                                    <img src="assets/images/slider/Top_img.webp" class="d-block w-100" alt="..."
                                         style="width: 100vw;">
                                     <div class="carousel-caption d-none d-md-block">
-                                        <h2 class="fs-0" style="color: #000;">The Transformative Power of AI</h2>
-                                        <p class="fsc" style="color: #000;">Generative AI Opportunity</p>
+                                        <!-- <h2 class="fs-0" style="color: #000;">The Transformative Power of AI</h2> -->
+                                        <!-- <p class="fsc" style="color: #000;">Generative AI Opportunity</p> -->
                                     </div>
                                 </div>
                                 <div class="carousel-item">
                                     <img src="assets/images/slider/Empower.png" class="d-block w-100" alt="web-design"
                                         style="width: 100vw;">
                                     <div class="carousel-caption d-none d-md-block">
-                                        <h2 class="fs-0" style="color: #000;">We Offer Professional IT Solutions</h2>
-                                        <p class="fsc" style="color: #000;">Empower your Success Journey by Engaging and
+                                        <!-- <h2 class="fs-0" style="color: #000;">We Offer Professional IT Solutions</h2> -->
+                                        <!-- <p class="fsc" style="color: #000;">Empower your Success Journey by Engaging and -->
                                             Connecting.</p>
                                     </div>
                                 </div>
@@ -641,11 +645,8 @@
                                     <img src="assets/images/slider/Servers.jpg" class="d-block w-100" alt="..."
                                         style="width: 100vw;">
                                     <div class="carousel-caption d-none d-md-block">
-                                        <h2 class="fs-0" style="color: #000;">High Performance Servers</h2>
-                                        <p class="fsc" style="color: #000;">Unlimited Domain, Hosting Unlimited, Hosting
-                                            Space and Unlimited
-                                            File
-                                            Transfer</p>
+                                        <!-- <h2 class="fs-0" style="color: #000;">High Performance Servers</h2> -->
+                                        <!-- <p class="fsc" style="color: #000;">Unlimited Domain, Hosting Unlimited, Hosting Space and Unlimited File Transfer</p> -->
                                     </div>
                                 </div>
                             </div>
@@ -910,7 +911,7 @@
                             <a href="generative_ai.html" class="btn red"><span>See more</span><span
                                     class="btn-arrow"></span></a>
                         </div>
-                        <ul class="block-ourWork__list" style="height: 500px;">
+                        <ul class="block-ourWork__list">
                             <li class="block-ourWork__list-item">
                                 <div class="work__img">
                                     <img src="assets/images/Offering/Ai_generate.jpg" alt="" loading="lazy" width="1144"
@@ -1107,70 +1108,161 @@
                 <style>
                     @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-                    .owl-carousel.version-1,
-                    .owl-carousel.version-2 {
+
+                    #news-slider {
+                        margin-top: 80px;
+                    }
+
+                    .post-slide {
+                        background: #fff;
+                        margin: 20px 15px 20px;
+                        border-radius: 15px;
+                        padding-top: 1px;
+                        box-shadow: 0px 14px 22px -9px #bbcbd8;
+                    }
+
+                    .post-slide .post-img {
                         position: relative;
-                        padding: 15px 35px 0;
+                        overflow: hidden;
+                        border-radius: 10px;
+                        margin: -12px 15px 8px 15px;
+                        margin-left: -10px;
                     }
 
-                    .logo-slider-1,
-                    .logo-slider-2 {
+                    .post-slide .post-img img {
                         width: 100%;
-                        max-width: 1000px;
-                        margin: 0 auto 40px;
-                        text-align: center;
+                        height: auto;
+                        transform: scale(1, 1);
+                        transition: transform 0.2s linear;
                     }
 
-                    .owl-carousel .owl-item {
-                        /* background: #fff; */
-                        padding: 0 20px;
+                    .post-slide:hover .post-img img {
+                        transform: scale(1.1, 1.1);
                     }
 
-                    .owl-nav button {
+                    .post-slide .over-layer {
+                        width: 100%;
+                        height: 100%;
                         position: absolute;
                         top: 0;
-                        bottom: 0;
-                        width: 30px;
-                        height: 30px;
-                        /* background: #fff !important; */
-                        border-radius: 50%;
-                        margin: auto 0;
-                        box-shadow: 0px 0px 5px #00000069;
-                    }
-
-                    .owl-nav button.owl-next {
-                        right: 0;
-                    }
-
-                    .owl-nav button.owl-prev {
                         left: 0;
+                        opacity: 0;
+                        background: linear-gradient(-45deg, rgba(6, 190, 244, 0.75) 0%, rgba(45, 112, 253, 0.6) 100%);
+                        transition: all 0.50s linear;
                     }
 
-                    .version-2 h2 {
-                        margin: 0px;
-                        font-size: 20px;
+                    .post-slide:hover .over-layer {
+                        opacity: 1;
+                        text-decoration: none;
                     }
 
-                    .version-2 p {
-                        font-size: 15px;
-                    }
-
-                    .version-2 .owl-item {
+                    .post-slide .over-layer i {
+                        position: relative;
+                        top: 45%;
                         text-align: center;
-                        padding: 10px 20px 20px;
-                        background-color: #ffdb50;
-                        border-radius: 20px 0 20px 0;
+                        display: block;
+                        color: #fff;
+                        font-size: 25px;
                     }
 
-                    .version-1 .owl-item {
-                        margin: 20px 0;
-                        box-shadow: 0 4px 20px rgba(0, 0, 0, 1.1);
-                        border-radius: 20px 0 20px 0;
+                    .post-slide .post-content {
+                        background: #fff;
+                        padding: 2px 20px 40px;
+                        border-radius: 15px;
                     }
 
-                    .version-2 .owl-item img {
-                        width: 160px;
-                        margin: 0 auto;
+                    .post-slide .post-title a {
+                        font-size: 15px;
+                        font-weight: bold;
+                        color: #333;
+                        display: inline-block;
+                        text-transform: uppercase;
+                        transition: all 0.3s ease 0s;
+                    }
+
+                    .post-slide .post-title a:hover {
+                        text-decoration: none;
+                        color: #3498db;
+                    }
+
+                    .post-slide .post-description {
+                        font-size: large;
+                        line-height: 24px;
+                        color: #808080;
+                        margin-bottom: 25px;
+                    }
+
+                    .post-slide .post-date {
+                        color: #a9a9a9;
+                        font-size: 14px;
+                    }
+
+                    .post-slide .post-date i {
+                        font-size: 20px;
+                        margin-right: 8px;
+                        color: #CFDACE;
+                    }
+
+                    .post-slide .read-more {
+                        padding: 7px 20px;
+                        float: right;
+                        font-size: 12px;
+                        background: #2196F3;
+                        color: #ffffff;
+                        box-shadow: 0px 10px 20px -10px #1376c5;
+                        border-radius: 25px;
+                        text-transform: uppercase;
+                    }
+
+                    .post-slide .read-more:hover {
+                        background: #3498db;
+                        text-decoration: none;
+                        color: #fff;
+                    }
+
+                    .owl-controls .owl-buttons {
+                        text-align: center;
+                        margin-top: 20px;
+                    }
+
+                    .owl-controls .owl-buttons .owl-prev {
+                        background: #fff;
+                        position: absolute;
+                        top: -13%;
+                        left: 15px;
+                        padding: 0 18px 0 15px;
+                        border-radius: 50px;
+                        box-shadow: 3px 14px 25px -10px #92b4d0;
+                        transition: background 0.5s ease 0s;
+                    }
+
+                    .owl-controls .owl-buttons .owl-next {
+                        background: #fff;
+                        position: absolute;
+                        top: -13%;
+                        right: 15px;
+                        padding: 0 15px 0 18px;
+                        border-radius: 50px;
+                        box-shadow: -3px 14px 25px -10px #92b4d0;
+                        transition: background 0.5s ease 0s;
+                    }
+
+                    .owl-controls .owl-buttons .owl-prev:after,
+                    .owl-controls .owl-buttons .owl-next:after {
+                        content: "\f104";
+                        font-family: FontAwesome;
+                        color: #333;
+                        font-size: 30px;
+                    }
+
+                    .owl-controls .owl-buttons .owl-next:after {
+                        content: "\f105";
+                    }
+
+                    @media only screen and (max-width:1280px) {
+                        .post-slide .post-content {
+                            padding: 0px 15px 25px 15px;
+                        }
                     }
                 </style>
                 <link rel='stylesheet'
@@ -1184,33 +1276,81 @@
                     style="background-image: url('/assets/images/background/New\ back.png'); background-size: cover;">
                     <h2 class="fs-0">What our clients say</h2>
                     <div class="owl-carousel version-2">
-                        <div>
-                            <img src="assets/images/review/Ankit.webp">
-                            <h2>Ankit Kumar</h2>
-                            <p>Exceptional service and expertise. Their team delivers innovative solutions that exceed
-                                expectations.</p>
+                        <div class="post-slide">
+                            <div class="post-img">
+                                <img src="assets/images/review/Adarsh Mishra.webp" alt="">
+                                <a href="#" class="over-layer"><i class="fa fa-link"></i></a>
+                            </div>
+                            <div class="post-content">
+                                <h3 class="post-title">
+                                    <a href="#">Adarsh Mishra</a>
+                                </h3>
+                                <p class="post-description">Highly professional and responsive. Impressed with their
+                                    attention to detail and timely
+                                    project delivery.</p>
+                                <!-- <span class="post-date"><i class="fa fa-clock-o"></i>Out 27, 2019</span> -->
+                                <!-- <a href="#" class="read-more">read more</a> -->
+                            </div>
                         </div>
-                        <div>
-                            <img src="assets/images/review/Himani Malhotra.webp">
-                            <h2>Himani Malhotra</h2>
-                            <p>Outstanding customer support. Their skilled technicians go above and beyond to ensure
-                                client satisfaction.</p>
+                        <div class="post-slide">
+                            <div class="post-img">
+                                <img src="assets/images/review/Rohan Verma.webp" alt="">
+                                <a href="#" class="over-layer"><i class="fa fa-link"></i></a>
+                            </div>
+                            <div class="post-content">
+                                <h3 class="post-title">
+                                    <a href="#">Rohan Verma</a>
+                                </h3>
+                                <p class="post-description">Innovative approaches and reliable support. Consistently
+                                    delivers superior results.</p>
+                                <!-- <span class="post-date"><i class="fa fa-clock-o"></i>Out 27, 2019</span> -->
+                                <!-- <a href="#" class="read-more">read more</a> -->
+                            </div>
                         </div>
-                        <div>
-                            <img src="assets/images/review/Ayushi.webp">
-                            <h2>Ayushi Sinha</h2>
-                            <p>Top-notch IT solutions provider. Reliable, efficient, and committed to excellence.</p>
+                        <div class="post-slide">
+                            <div class="post-img">
+                                <img src="assets/images/review/Ayushi.webp" alt="">
+                                <a href="#" class="over-layer"><i class="fa fa-link"></i></a>
+                            </div>
+                            <div class="post-content">
+                                <h3 class="post-title">
+                                    <a href="#">Ayushi Sinha</a>
+                                </h3>
+                                <p class="post-description">Top-notch IT solutions provider. Reliable, efficient, and
+                                    committed to excellence.</p>
+                                <!-- <span class="post-date"><i class="fa fa-clock-o"></i>Out 27, 2019</span> -->
+                                <!-- <a href="#" class="read-more">read more</a> -->
+                            </div>
                         </div>
-                        <div>
-                            <img src="assets/images/review/Rohan Verma.webp">
-                            <h2>Rohan Verma</h2>
-                            <p>Innovative approaches and reliable support. Consistently delivers superior results.</p>
+                        <div class="post-slide">
+                            <div class="post-img">
+                                <img src="assets/images/review/Ankit.webp" alt="">
+                                <a href="#" class="over-layer"><i class="fa fa-link"></i></a>
+                            </div>
+                            <div class="post-content">
+                                <h3 class="post-title">
+                                    <a href="#">Ankit Kumar</a>
+                                </h3>
+                                <p class="post-description">Exceptional service and expertise. Their team delivers innovative solutions that exceed expectations.</p>
+                                <!-- <span class="post-date"><i class="fa fa-clock-o"></i>Out 27, 2019</span> -->
+                                <!-- <a href="#" class="read-more">read more</a> -->
+                            </div>
                         </div>
-                        <div>
-                            <img src="assets/images/review/Adarsh Mishra.webp">
-                            <h2>Adarsh Mishra</h2>
-                            <p>Highly professional and responsive. Impressed with their attention to detail and timely
-                                project delivery.</p>
+                        <div class="post-slide">
+                            <div class="post-img">
+                                <img src="assets/images/review/Himani Malhotra.webp" alt="">
+                                <a href="#" class="over-layer"><i class="fa fa-link"></i></a>
+                            </div>
+                            <div class="post-content">
+                                <h3 class="post-title">
+                                    <a href="#">Ankit Kumar</a>
+                                </h3>
+                                <p class="post-description">Outstanding customer support. Their skilled technicians go
+                                    above and beyond to ensure
+                                    client satisfaction.</p>
+                                <!-- <span class="post-date"><i class="fa fa-clock-o"></i>Out 27, 2019</span> -->
+                                <!-- <a href="#" class="read-more">read more</a> -->
+                            </div>
                         </div>
                     </div>
                 </div>
