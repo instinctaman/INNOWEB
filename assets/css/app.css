@@ -1,5 +1,13 @@
 @charset "UTF-8";
-
+p{
+    font-size: 18px;
+}
+/* span{
+    font-size: 18px;
+} */
+a{
+    font-size: 15px;
+}
 :root {
     --primary-my-color: rgb(247, 105, 2);
     /* You can name it anything */
@@ -91,8 +99,8 @@ address {
 
 a {
     background-color: transparent;
-    /* color: inherit; */
-    color: #000;
+    color: inherit;
+    /* color: #000; */
     text-decoration: none
 }
 
@@ -1369,7 +1377,8 @@ p.small {
 
 .footer {
     align-items: center;
-    background: linear-gradient(to right, #a6fff3 10%, #00ffdd 80%);
+    /* background: linear-gradient(to right, #a6fff3 10%, #00ffdd 80%); */
+    background: #2a323e;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -1659,6 +1668,7 @@ p.small {
 }
 
 .header .link-prosumer {
+    color: #000;
     pointer-events: all
 }
 

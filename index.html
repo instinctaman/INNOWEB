@@ -195,7 +195,7 @@
                 <section data-theme-color="dark-theme" id="hero" data-label="Video presentation"
                     class="block-hero container container-home visible js-anchor">
                     <span class="block-hero__line"></span>
-                    
+
                     <div class="block-hero__content">
                         <h1 data-animation-path="https://www.havas.com/havas-content/themes/havas-group/dist/assets/images/logo_red-animated.json"
                             class="hero-logo">Empower your Success Journey</h1>
@@ -423,8 +423,8 @@
                         <div class="block-services__left">
                             <div class="block-services__left__content" style="width: 100%;">
                                 <h2><span>Our services</span></h2>
-                                <a href="web_design_development.html" class="btn red"><span>What we do</span><span
-                                        class="btn-arrow"></span></a>
+                                <!-- <a href="web_design_development.html" class="btn red"><span>What we do</span><span
+                                        class="btn-arrow"></span></a> -->
                             </div>
                         </div>
                         <div class="row">
@@ -2655,69 +2655,327 @@
             </div>
 
         </main>
-        <footer data-wpr-lazyrender="1" class="footer" id="downid">
-            <div class="footer__line">
-                <ul class="footer__list">
-                    <li><a href="index.html" target="_self" title="Havas Villages">Home</a></li>
-                    <li><a href="about_us.html" target="_self" title="Dare! Magazine">About Us</a></li>
+        <style>
+            .footer-section {
+                padding: 0 0 0 25px;
+                background: #151414;
+                position: relative;
+            }
 
-                    <li><a href="press_release/meaningful-brands-2019-press-release/index.html" target="_self"
-                            title="Meaningful Brands">Meaningful Brands</a></li>
-                    <li><a href="web_design_development.html" target="_self" title="Prosumer Reports">Services</a></li>
-                </ul>
-                <ul class="footer__list rs--">
-                    <li><a href="https://www.linkedin.com/company/innoweb-solution/" target="_blank" class="small--"
-                            rel="external nofollow" title="Havas on LinkedIn"><i class="fa-brands fa-linkedin"></i><span
-                                class="sr-only">Innoweb on LinkedIn</span></a></li>
-                    <li><a href="https://www.facebook.com/Innowebsolution/" target="_blank" rel="external nofollow"
-                            title="Innoweb on Facebook"><i class="fa-brands fa-facebook"></i></i><span
-                                class="sr-only">Innoweb on Facebook</span></a></li>
-                    <li><a href="https://x.com/innowebsoluton" target="_blank" class="small--" rel="external nofollow"
-                            title="Innoweb on Twitter"><i class="fa-brands fa-square-x-twitter"></i><span
-                                class="sr-only">Innoweb on Twitter</span></a></li>
-                    <li><a href="https://www.instagram.com/innowebsolution.ltd/#" target="_blank"
-                            rel="external nofollow" title="Innoweb on Instagram"><i
-                                class="fa-brands fa-square-instagram"></i><span class="sr-only">Innoweb on
-                                Instagram</span></a></li>
-                </ul>
+            .footer-cta {
+                border-bottom: 1px solid #373636;
+            }
+            .single-cta{
+                display: flex;
+            }
+            .single-cta i {
+                color: #ff5e14;
+                font-size: 30px;
+                float: left;
+                margin-top: 8px;
+            }
+
+            .cta-text {
+                padding-left: 15px;
+                display: inline-block;
+            }
+
+            .cta-text h4 {
+                color: #fff;
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 2px;
+            }
+
+            .cta-text span {
+                color: #757575;
+                font-size: 15px;
+            }
+
+            .footer-content {
+                position: relative;
+                z-index: 2;
+            }
+
+            .footer-pattern img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 330px;
+                background-size: cover;
+                background-position: 100% 100%;
+            }
+
+            .footer-logo {
+                margin-bottom: 30px;
+            }
+
+            .footer-logo img {
+                border-radius: 15px;
+                background: white;
+                max-width: 200px;
+            }
+
+            .footer-text p {
+                margin-bottom: 14px;
+                font-size: 14px;
+                color: #7e7e7e;
+                line-height: 28px;
+            }
+
+            .footer-social-icon span {
+                color: #fff;
+                display: block;
+                font-size: 20px;
+                font-weight: 700;
+                font-family: 'Poppins', sans-serif;
+                margin-bottom: 20px;
+            }
+
+            .footer-social-icon a {
+                color: #fff;
+                font-size: 16px;
+                margin-right: 15px;
+            }
+
+            .footer-social-icon i {
+                height: 40px;
+                width: 40px;
+                text-align: center;
+                line-height: 38px;
+                border-radius: 50%;
+            }
+
+            .facebook-bg {
+                background: #3B5998;
+            }
+
+            .twitter-bg {
+                background: #55ACEE;
+            }
+            .linkedin-bg{
+                background: #0077B5;
+            }
+            .instagram-bg{
+                background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+            }
+            .google-bg {
+                background: var(--primary-my-color);
+            }
+
+            .footer-widget-heading h3 {
+                color: #fff;
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 40px;
+                position: relative;
+            }
+
+            .footer-widget-heading h3::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -15px;
+                height: 2px;
+                width: 50px;
+                background: #ff5e14;
+            }
+
+            .footer-widget ul li {
+                display: inline-block;
+                float: left;
+                width: 50%;
+                margin-bottom: 12px;
+            }
+
+            .footer-widget ul li a:hover {
+                color: #ff5e14;
+            }
+
+            .footer-widget ul li a {
+                color: #878787;
+                text-transform: capitalize;
+            }
+
+            .subscribe-form {
+                position: relative;
+                overflow: hidden;
+            }
+
+            .subscribe-form input {
+                width: 100%;
+                padding: 14px 28px;
+                background: #2E2E2E;
+                border: 1px solid #2E2E2E;
+                color: #fff;
+            }
+
+            .subscribe-form button {
+                position: absolute;
+                right: 0;
+                background: #ff5e14;
+                padding: 13px 20px;
+                border: 1px solid #ff5e14;
+                top: 0;
+            }
+
+            .subscribe-form button i {
+                color: #fff;
+                font-size: 22px;
+                transform: rotate(-6deg);
+            }
+
+            .copyright-area {
+                background: #202020;
+                padding: 25px 0;
+            }
+
+            .copyright-text p {
+                margin: 0;
+                font-size: 14px;
+                color: #878787;
+            }
+
+            .copyright-text p a {
+                color: #ff5e14;
+            }
+
+            .footer-menu li {
+                display: inline-block;
+                margin-left: 20px;
+            }
+
+            .footer-menu li:hover a {
+                color: #ff5e14;
+            }
+
+            .footer-menu li a {
+                font-size: 14px;
+                color: #878787;
+            }
+        </style>
+        <footer class="footer-section">
+            <div class="container">
+                <div class="footer-cta pt-5 pb-5">
+                    <div class="row">
+                        <div class="col-xl-4 col-md-4 mb-30">
+                            <div class="single-cta">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="cta-text">
+                                    <h4>Find us</h4>
+                                    <a href="#"><span>Innoweb Solution Pvt. ltd., Maula Ali Road, Knowledge Park II,
+                                            Greater Noida, Uttar Pradesh - 201310</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-4 mb-30">
+                            <div class="single-cta">
+                                <i class="fas fa-phone"></i>
+                                <div class="cta-text">
+                                    <h4>Call us</h4>
+                                    <a href="tel:+91-9911089108"><span>+91-9911089108</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-4 mb-30">
+                            <div class="single-cta">
+                                <i class="far fa-envelope-open"></i>
+                                <div class="cta-text">
+                                    <h4>Mail us</h4>
+                                    <a
+                                        href="mailto:infowebsolution@gmail.com"><span>infowebsolution@gmail.com</span></a>,<a
+                                        href="mailto:info@innowebsolution.com"><span>
+                                            info@innowebsolution.com</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-content pt-5 pb-5">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-4 mb-50">
+                            <div class="footer-widget">
+                                <div class="footer-logo">
+                                    <a href="index.html"><img src="assets/images/Inno_logo.png" class="img-fluid"
+                                            alt="logo"></a>
+                                </div>
+                                <div class="footer-text">
+                                    <p>Innoweb Solution is one of the leading web solutions company based in Delhi.
+                                        Since the time of its inception, we have been striving to proffer result
+                                        oriented, effective, quality and cost effective services to clients spread
+                                        across the different industry verticals.</p>
+                                </div>
+                                <div class="footer-social-icon">
+                                    <span>Follow us</span>
+                                    <a href="https://www.facebook.com/Innowebsolution/"><i
+                                            class="fab fa-facebook-f facebook-bg"></i></a>
+                                    <a href="https://x.com/innowebsoluton"><i
+                                            class="fa-brands fa-x-twitter x-twitter-bg"></i></a>
+                                    <a href="https://www.linkedin.com/company/innoweb-solution/"><i
+                                            class="fa-brands fa-linkedin linkedin-bg"></i></a>
+                                    <a href="https://www.instagram.com/innowebsolution.ltd/"><i
+                                            class="fa-brands fa-instagram instagram-bg"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                            <div class="footer-widget">
+                                <div class="footer-widget-heading">
+                                    <h3>Useful Links</h3>
+                                </div>
+                                <ul>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">about</a></li>
+                                    <li><a href="#">services</a></li>
+                                    <li><a href="#">portfolio</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="#">About us</a></li>
+                                    <li><a href="#">Our Services</a></li>
+                                    <li><a href="#">Expert Team</a></li>
+                                    <li><a href="#">Contact us</a></li>
+                                    <li><a href="#">Latest News</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                            <div class="footer-widget">
+                                <div class="footer-widget-heading">
+                                    <h3>Get in Touch</h3>
+                                </div>
+                                <div class="footer-text mb-25">
+                                    <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                                </div>
+                                <div class="subscribe-form">
+                                    <form action="#">
+                                        <input type="text" placeholder="Email Address">
+                                        <button><i class="fab fa-telegram-plane"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="footer__line" role="contentinfo">
-                <ul id="menu-footer-menu" class="footer__list">
-                    <li id="menu-item-2719"
-                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2719">
-                        <a href="clients.html">Clients</a>
-                    </li>
-                    <li id="menu-item-8858"
-                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8858">
-                        <a href="#">General Terms and Conditions of
-                            Use</a>
-                    </li>
-                    <li id="menu-item-2717"
-                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2717">
-                        <a href="#">Data
-                            Protection Policy</a>
-                    </li>
-                    <li id="menu-item-10373"
-                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10373"><a
-                            href="#">Privacy
-                            Notice</a></li>
-                    <li id="menu-item-2718"
-                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2718">
-                        <a href="contact_us.html">Contact Us</a>
-                    </li>
-                    <!-- <li id="menu-item-157"
-                        class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-157">
-                        <a href="index.html#rgpd" aria-current="page">Cookie settings</a>
-                    </li> -->
-                    <!-- <li id="menu-item-15890"
-                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15890"><a
-                            href="sitemap/index.html">Sitemap</a></li>
-                    <li id="menu-item-15936"
-                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15936"><a
-                            href="accessibilite/index.html">Accessibility</a></li> -->
-                </ul>
-                <div class="footer__list">
-                    <span>© 2024 Innoweb Solution</span>
+            <div class="copyright-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                            <div class="copyright-text">
+                                <p>Copyright &copy; 2024, developed by <a href="#">Innoweb</a>. All Right Reserved</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                            <div class="footer-menu">
+                                <ul>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">Terms</a></li>
+                                    <li><a href="#">Privacy</a></li>
+                                    <li><a href="#">Policy</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </footer>

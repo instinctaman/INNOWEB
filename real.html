@@ -166,7 +166,9 @@
                 </div>
             </div>
         </nav>
-        <script>let lastScrollTop = 0;
+
+        <script>
+            let lastScrollTop = 0;
             const navbar = document.getElementById('navbar');
 
             window.addEventListener('scroll', function () {
@@ -193,6 +195,7 @@
                 <section data-theme-color="dark-theme" id="hero" data-label="Video presentation"
                     class="block-hero container container-home visible js-anchor">
                     <span class="block-hero__line"></span>
+
                     <div class="block-hero__content">
                         <h1 data-animation-path="https://www.havas.com/havas-content/themes/havas-group/dist/assets/images/logo_red-animated.json"
                             class="hero-logo">Empower your Success Journey</h1>
@@ -420,8 +423,8 @@
                         <div class="block-services__left">
                             <div class="block-services__left__content" style="width: 100%;">
                                 <h2><span>Our services</span></h2>
-                                <a href="web_design_development.html" class="btn red"><span>What we do</span><span
-                                        class="btn-arrow"></span></a>
+                                <!-- <a href="web_design_development.html" class="btn red"><span>What we do</span><span
+                                        class="btn-arrow"></span></a> -->
                             </div>
                         </div>
                         <div class="row">
@@ -505,8 +508,7 @@
                         class="block-ourWork container container-home js-anchor">
                         <div class="block-ourWork__content">
                             <h2><span>Solutions & Offerings</span></h2>
-                            <a href="generative_ai.html" class="btn red"><span>See more</span><span
-                                    class="btn-arrow"></span></a>
+
                         </div>
                         <ul class="block-ourWork__list">
                             <li class="block-ourWork__list-item">
@@ -646,6 +648,8 @@
                                 <span class="smart-cursor">View</span>
                             </li>
                         </ul>
+                        <div style="display: flex; justify-content: end"><a href="generative_ai.html"
+                                class="btn red"><span>See more</span><span class="btn-arrow"></span></a></div>
                     </section>
                     <div class="js-modal__modal js-focus-trap" id="ourwork-modal" role="dialog" aria-modal="true"
                         data-noresults="No results">
@@ -667,6 +671,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
 
                 <!-- !BLOCK OUR WORK  -->
@@ -691,8 +696,8 @@
                         position: relative;
                         overflow: hidden;
                         border-radius: 10px;
-                        margin: -12px 15px 8px 15px;
-                        margin-left: -10px;
+                        /* margin: -12px 15px 8px 15px;
+                        margin-left: -10px; */
                     }
 
                     .post-slide .post-img img {
@@ -840,7 +845,11 @@
                 <!-- Logo slider with Title and description -->
                 <div class="logo-slider-2"
                     style="background-image: url('/assets/images/background/New\ back.png'); background-size: cover;">
-                    <h2 class="fs-0 link-prosumer btn-underline full-- simpleLink">What our clients say</h2>
+                    <div class="block-ourWork__content">
+                        <h2 class="fs-0 link-prosumer btn-underline full-- simpleLink">What our clients say</h2>
+
+                    </div>
+
                     <div class="owl-carousel version-2">
                         <div class="post-slide">
                             <div class="post-img">
@@ -923,18 +932,6 @@
                 </div>
 
                 <style>
-                    /**
- * Swiper 8.2.3
- * Most modern mobile touch slider and framework with hardware accelerated transitions
- * https://swiperjs.com
- *
- * Copyright 2014-2022 Vladimir Kharlampidi
- *
- * Released under the MIT License
- *
- * Released on: June 10, 2022
- */
-
                     @font-face {
                         font-family: swiper-icons;
                         src: url('data:application/font-woff;charset=utf-8;base64, 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');
@@ -2327,10 +2324,11 @@
                     }
 
                     .marquee-item {
+                        padding: 25px 0;
                         flex-shrink: 0;
                         width: 180px;
                         /* Set your desired width */
-                        height: 140px;
+                        /* height: 140px; */
                         background-color: #fff;
                         display: flex;
                         justify-content: center;
@@ -2457,15 +2455,16 @@
                         margin-top: 20px;
                     }
                 </style>
-                <section class="section-padding_h1 popular-course"
-                    style="padding-bottom: 50px;padding-top: 30px; ">
+                <section class="section-padding_h1 popular-course" style="padding-bottom: 50px;padding-top: 30px; ">
                     <div class="container">
                         <div class="row align-items-center justify-content-center">
                             <div class="col-lg-12">
-                                <div class="section-heading center-heading one on2">
-                                    <h3 class="rts__section--title text-capitalize" style=" text-align: center; ">Our
+                                <div class="block-ourWork__content">
+                                    <h2 class="rts__section--title text-capitalize" style=" text-align: center; ">Our
                                         Clients</h2>
+
                                 </div>
+
                             </div>
                         </div>
                         <div class="marquee">
@@ -2603,7 +2602,7 @@
                                 nav: false
                             },
                             1000: {
-                                items: 3,
+                                items: 4,
                                 nav: true
                             }
                         }
@@ -2626,10 +2625,10 @@
 
             </div>
             <!-- BLOCK MENU STICKY  -->
-            <<div class="menuFixed">
+            <div class="menuFixed">
                 <ul class="menuFixed__bottom">
                     <li class="menuFixed__bottom-item">
-                        <a class="btn-underline full--" href="#upperid" title="Go to Top">Go to Top</a>
+                        <a class="btn-underline full--" href="#" title="Go to Top">Go to Top</a>
                     </li>
                     <li class="menuFixed__bottom-item">
                         <button class="btn-underline c-contact_toggle js-start-focus-trap" aria-haspopup="dialog"
@@ -2638,85 +2637,348 @@
                             connect? </button>
                     </li>
                 </ul>
-    </div>
-    <!-- !BLOCK MENU STICKY  -->
-    <div class="c-contact js-focus-trap" id="contact-modal" aria-labelledby="contact-modal-title" role="dialog"
-        aria-modal="true">
-        <div class="c-contact__overlay"></div>
-        <div class="c-contact__container">
-
-            <div class="c-contact__content">
-                <h2 class="h2" id="contact-modal-title">Want to connect?</h2>
-                <p class="question">
-                </p>
             </div>
-            <button class="c-contact__close js-end-focus-trap"><i class="fa-solid fa-xmark"></i><span
-                    class="simpleLink black--">Close</span></button>
-        </div>
-    </div>
+            <!-- !BLOCK MENU STICKY  -->
+            <div class="c-contact js-focus-trap" id="contact-modal" aria-labelledby="contact-modal-title" role="dialog"
+                aria-modal="true">
+                <div class="c-contact__overlay"></div>
+                <div class="c-contact__container">
 
-    </main>
-    <footer data-wpr-lazyrender="1" class="footer" id="downid">
-        <div class="footer__line">
-            <ul class="footer__list">
-                <li><a href="index.html" target="_self" title="Havas Villages">Home</a></li>
-                <li><a href="about_us.html" target="_self" title="Dare! Magazine">About Us</a></li>
-
-                <li><a href="press_release/meaningful-brands-2019-press-release/index.html" target="_self"
-                        title="Meaningful Brands">Meaningful Brands</a></li>
-                <li><a href="web_design_development.html" target="_self" title="Prosumer Reports">Services</a></li>
-            </ul>
-            <ul class="footer__list rs--">
-                <li><a href="https://www.linkedin.com/company/innoweb-solution/" target="_blank" class="small--"
-                        rel="external nofollow" title="Havas on LinkedIn"><i class="fa-brands fa-linkedin"></i><span
-                            class="sr-only">Innoweb on LinkedIn</span></a></li>
-                <li><a href="https://www.facebook.com/Innowebsolution/" target="_blank" rel="external nofollow"
-                        title="Innoweb on Facebook"><i class="fa-brands fa-facebook"></i></i><span
-                            class="sr-only">Innoweb on Facebook</span></a></li>
-                <li><a href="https://x.com/innowebsoluton" target="_blank" class="small--" rel="external nofollow"
-                        title="Innoweb on Twitter"><i class="fa-brands fa-square-x-twitter"></i><span
-                            class="sr-only">Innoweb on Twitter</span></a></li>
-                <li><a href="https://www.instagram.com/innowebsolution.ltd/#" target="_blank" rel="external nofollow"
-                        title="Innoweb on Instagram"><i class="fa-brands fa-square-instagram"></i><span
-                            class="sr-only">Innoweb on
-                            Instagram</span></a></li>
-            </ul>
-        </div>
-        <div class="footer__line" role="contentinfo">
-            <ul id="menu-footer-menu" class="footer__list">
-                <li id="menu-item-2719" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2719">
-                    <a href="clients.html">Clients</a>
-                </li>
-                <li id="menu-item-8858" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8858">
-                    <a href="#">General Terms and Conditions of
-                        Use</a>
-                </li>
-                <li id="menu-item-2717" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2717">
-                    <a href="#">Data
-                        Protection Policy</a>
-                </li>
-                <li id="menu-item-10373"
-                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10373"><a href="#">Privacy
-                        Notice</a></li>
-                <li id="menu-item-2718" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2718">
-                    <a href="contact_us.html">Contact Us</a>
-                </li>
-                <!-- <li id="menu-item-157"
-                        class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-157">
-                        <a href="index.html#rgpd" aria-current="page">Cookie settings</a>
-                    </li> -->
-                <!-- <li id="menu-item-15890"
-                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15890"><a
-                            href="sitemap/index.html">Sitemap</a></li>
-                    <li id="menu-item-15936"
-                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15936"><a
-                            href="accessibilite/index.html">Accessibility</a></li> -->
-            </ul>
-            <div class="footer__list">
-                <span>© 2024 Innoweb Solution</span>
+                    <div class="c-contact__content">
+                        <h2 class="h2" id="contact-modal-title">Want to connect?</h2>
+                        <p class="question">
+                        </p>
+                    </div>
+                    <button class="c-contact__close js-end-focus-trap"><i class="fa-solid fa-xmark"></i><span
+                            class="simpleLink black--">Close</span></button>
+                </div>
             </div>
-        </div>
-    </footer>
+
+        </main>
+        <style>
+            .footer-section {
+                padding: 0 0 0 25px;
+                background: #151414;
+                position: relative;
+            }
+
+            .footer-cta {
+                border-bottom: 1px solid #373636;
+            }
+            .single-cta{
+                display: flex;
+            }
+            .single-cta i {
+                color: #ff5e14;
+                font-size: 30px;
+                float: left;
+                margin-top: 8px;
+            }
+
+            .cta-text {
+                padding-left: 15px;
+                display: inline-block;
+            }
+
+            .cta-text h4 {
+                color: #fff;
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 2px;
+            }
+
+            .cta-text span {
+                color: #757575;
+                font-size: 15px;
+            }
+
+            .footer-content {
+                position: relative;
+                z-index: 2;
+            }
+
+            .footer-pattern img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 330px;
+                background-size: cover;
+                background-position: 100% 100%;
+            }
+
+            .footer-logo {
+                margin-bottom: 30px;
+            }
+
+            .footer-logo img {
+                border-radius: 15px;
+                background: white;
+                max-width: 200px;
+            }
+
+            .footer-text p {
+                margin-bottom: 14px;
+                font-size: 14px;
+                color: #7e7e7e;
+                line-height: 28px;
+            }
+
+            .footer-social-icon span {
+                color: #fff;
+                display: block;
+                font-size: 20px;
+                font-weight: 700;
+                font-family: 'Poppins', sans-serif;
+                margin-bottom: 20px;
+            }
+
+            .footer-social-icon a {
+                color: #fff;
+                font-size: 16px;
+                margin-right: 15px;
+            }
+
+            .footer-social-icon i {
+                height: 40px;
+                width: 40px;
+                text-align: center;
+                line-height: 38px;
+                border-radius: 50%;
+            }
+
+            .facebook-bg {
+                background: #3B5998;
+            }
+
+            .twitter-bg {
+                background: #55ACEE;
+            }
+            .linkedin-bg{
+                background: #0077B5;
+            }
+            .instagram-bg{
+                background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+            }
+            .google-bg {
+                background: var(--primary-my-color);
+            }
+
+            .footer-widget-heading h3 {
+                color: #fff;
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 40px;
+                position: relative;
+            }
+
+            .footer-widget-heading h3::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -15px;
+                height: 2px;
+                width: 50px;
+                background: #ff5e14;
+            }
+
+            .footer-widget ul li {
+                display: inline-block;
+                float: left;
+                width: 50%;
+                margin-bottom: 12px;
+            }
+
+            .footer-widget ul li a:hover {
+                color: #ff5e14;
+            }
+
+            .footer-widget ul li a {
+                color: #878787;
+                text-transform: capitalize;
+            }
+
+            .subscribe-form {
+                position: relative;
+                overflow: hidden;
+            }
+
+            .subscribe-form input {
+                width: 100%;
+                padding: 14px 28px;
+                background: #2E2E2E;
+                border: 1px solid #2E2E2E;
+                color: #fff;
+            }
+
+            .subscribe-form button {
+                position: absolute;
+                right: 0;
+                background: #ff5e14;
+                padding: 13px 20px;
+                border: 1px solid #ff5e14;
+                top: 0;
+            }
+
+            .subscribe-form button i {
+                color: #fff;
+                font-size: 22px;
+                transform: rotate(-6deg);
+            }
+
+            .copyright-area {
+                background: #202020;
+                padding: 25px 0;
+            }
+
+            .copyright-text p {
+                margin: 0;
+                font-size: 14px;
+                color: #878787;
+            }
+
+            .copyright-text p a {
+                color: #ff5e14;
+            }
+
+            .footer-menu li {
+                display: inline-block;
+                margin-left: 20px;
+            }
+
+            .footer-menu li:hover a {
+                color: #ff5e14;
+            }
+
+            .footer-menu li a {
+                font-size: 14px;
+                color: #878787;
+            }
+        </style>
+        <footer class="footer-section">
+            <div class="container">
+                <div class="footer-cta pt-5 pb-5">
+                    <div class="row">
+                        <div class="col-xl-4 col-md-4 mb-30">
+                            <div class="single-cta">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="cta-text">
+                                    <h4>Find us</h4>
+                                    <a href="#"><span>Innoweb Solution Pvt. ltd., Maula Ali Road, Knowledge Park II,
+                                            Greater Noida, Uttar Pradesh - 201310</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-4 mb-30">
+                            <div class="single-cta">
+                                <i class="fas fa-phone"></i>
+                                <div class="cta-text">
+                                    <h4>Call us</h4>
+                                    <a href="tel:+91-9911089108"><span>+91-9911089108</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-4 mb-30">
+                            <div class="single-cta">
+                                <i class="far fa-envelope-open"></i>
+                                <div class="cta-text">
+                                    <h4>Mail us</h4>
+                                    <a
+                                        href="mailto:infowebsolution@gmail.com"><span>infowebsolution@gmail.com</span></a>,<a
+                                        href="mailto:info@innowebsolution.com"><span>
+                                            info@innowebsolution.com</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-content pt-5 pb-5">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-4 mb-50">
+                            <div class="footer-widget">
+                                <div class="footer-logo">
+                                    <a href="index.html"><img src="assets/images/Inno_logo.png" class="img-fluid"
+                                            alt="logo"></a>
+                                </div>
+                                <div class="footer-text">
+                                    <p>Innoweb Solution is one of the leading web solutions company based in Delhi.
+                                        Since the time of its inception, we have been striving to proffer result
+                                        oriented, effective, quality and cost effective services to clients spread
+                                        across the different industry verticals.</p>
+                                </div>
+                                <div class="footer-social-icon">
+                                    <span>Follow us</span>
+                                    <a href="https://www.facebook.com/Innowebsolution/"><i
+                                            class="fab fa-facebook-f facebook-bg"></i></a>
+                                    <a href="https://x.com/innowebsoluton"><i
+                                            class="fa-brands fa-x-twitter x-twitter-bg"></i></a>
+                                    <a href="https://www.linkedin.com/company/innoweb-solution/"><i
+                                            class="fa-brands fa-linkedin linkedin-bg"></i></a>
+                                    <a href="https://www.instagram.com/innowebsolution.ltd/"><i
+                                            class="fa-brands fa-instagram instagram-bg"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                            <div class="footer-widget">
+                                <div class="footer-widget-heading">
+                                    <h3>Useful Links</h3>
+                                </div>
+                                <ul>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">about</a></li>
+                                    <li><a href="#">services</a></li>
+                                    <li><a href="#">portfolio</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="#">About us</a></li>
+                                    <li><a href="#">Our Services</a></li>
+                                    <li><a href="#">Expert Team</a></li>
+                                    <li><a href="#">Contact us</a></li>
+                                    <li><a href="#">Latest News</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                            <div class="footer-widget">
+                                <div class="footer-widget-heading">
+                                    <h3>Get in Touch</h3>
+                                </div>
+                                <div class="footer-text mb-25">
+                                    <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                                </div>
+                                <div class="subscribe-form">
+                                    <form action="#">
+                                        <input type="text" placeholder="Email Address">
+                                        <button><i class="fab fa-telegram-plane"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                            <div class="copyright-text">
+                                <p>Copyright &copy; 2024, developed by <a href="#">Innoweb</a>. All Right Reserved</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                            <div class="footer-menu">
+                                <ul>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">Terms</a></li>
+                                    <li><a href="#">Privacy</a></li>
+                                    <li><a href="#">Policy</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
@@ -2765,7 +3027,8 @@
         var data_api = { "url_agencies": "https:\/\/www.havas.com\/wp-json\/havas-group\/v2\/agencies\/?lang=en", "url_countries": "https:\/\/www.havas.com\/wp-json\/havas-group\/v2\/countries\/?lang=en", "url_press_releases": "https:\/\/www.havas.com\/wp-json\/havas-group\/v1\/press-releases\/?lang=en", "url_prosumer_reports": "https:\/\/www.havas.com\/wp-json\/havas-group\/v1\/prosumer-reports\/?lang=en", "url_contact": "https:\/\/www.havas.com\/wp-json\/df-contact\/v1\/save\/?lang=en", "agencies_api_partner_key": "231d958e9410aa7d573800c021515647", "url_bourse": "https:\/\/www.havas.com\/wp-json\/havas-group\/v1\/bourse\/?lang=en", "url_bourse_graphique": "https:\/\/www.havas.com\/wp-json\/havas-group\/v1\/bourse-history\/?lang=en" };
         /* ]]> */
     </script>
-    <script src="havas-content/themes/havas-group/dist/app.js" id="havas_group-main-js"></script>
+    <script src="assets/js/app.js" id="havas_group-main-js"></script>
+    <script src="assets/js/loadLayout.js"></script>
 
 </body>
 
